@@ -1,6 +1,6 @@
-# Monta as apresentações a partir de /src (padrão projetos.75lab.com.br: Pages servindo main / raiz)
-#  - index.html            : proposta comercial (15 telas)      -> projetos.75lab.com.br/<repo>/
-#  - completa/index.html   : plano completo (42 telas)          -> projetos.75lab.com.br/<repo>/completa/
+# Monta as apresentações a partir de /src (Pages servindo main / raiz)
+#  - index.html            : proposta comercial (15 telas)      -> agencia75lab.github.io/lactalis-na-operacao/
+#  - completa/index.html   : plano completo (42 telas)          -> agencia75lab.github.io/lactalis-na-operacao/completa/
 #  - artifact/*.html       : fragmentos para publicação como Artifact claude.ai (o host injeta doctype/head/body)
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path

@@ -2,8 +2,8 @@
 
 Apresentação HTML da proposta 75 LAB para a entrada da **Lactalis Brasil em Food Service** (piloto Bidfood São Paulo, outubro de 2026).
 
-- **Proposta comercial (15 telas):** https://projetos.75lab.com.br/lactalis-na-operacao/
-- **Plano completo (42 telas):** https://projetos.75lab.com.br/lactalis-na-operacao/completa/
+- **Proposta comercial (15 telas):** https://agencia75lab.github.io/lactalis-na-operacao/
+- **Plano completo (42 telas):** https://agencia75lab.github.io/lactalis-na-operacao/completa/
 
 ## Estrutura
 
