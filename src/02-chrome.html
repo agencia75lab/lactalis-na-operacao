@@ -1,0 +1,51 @@
+<style>
+.route .stop{transform:translate(calc(max(12px,var(--u)*1.5)/-2),calc(max(12px,var(--u)*1.5)/-2))}
+.route .stop.up{flex-direction:column-reverse}
+.route .stop.up{transform:translate(calc(max(12px,var(--u)*1.5)/-2),calc(-100% + max(12px,var(--u)*1.5)/2))}
+</style>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="orbit" aria-hidden="true">
+  <svg viewBox="-100 -100 200 200"><path d="M-78,18 C-96,-30 -30,-62 40,-58 C60,-57 74,-52 82,-46" stroke-width=".9" opacity=".9"/><path d="M84,-26 C100,22 30,58 -40,56 C-56,55 -68,52 -74,49" stroke-width=".55" opacity=".7"/></svg>
+</div>
+
+<header class="hdr" role="banner">
+  <div class="brands" aria-label="Lactalis Brasil e 75LAB">
+    <span class="lg lg-lac"><img class="on-light" src="assets/images/lactalis-brasil.png" alt="Lactalis Brasil"><img class="on-dark" src="assets/images/lactalis-brasil.png" alt="" aria-hidden="true"></span>
+    <span class="x" aria-hidden="true"></span>
+    <span class="lg lg-lab"><img class="on-light" src="assets/images/75lab-black.png" alt="75LAB"><img class="on-dark" src="assets/images/75lab-lime.png" alt="" aria-hidden="true"></span>
+  </div>
+  <div class="chap" id="chapLabel" aria-hidden="true"><b>Abertura</b></div>
+  <div class="count" aria-live="off"><b id="cNow">01</b> / <span id="cAll">00</span></div>
+  <button class="menu-btn magnetic" id="menuBtn" aria-label="Abrir capítulos" aria-expanded="false" aria-controls="menu"><i aria-hidden="true"><span></span><span></span></i>Capítulos</button>
+</header>
+
+<footer class="ftr">
+  <button class="nav-b magnetic" id="prevB" aria-label="Tela anterior"><svg viewBox="0 0 16 16"><path d="M10 3L5 8l5 5"/></svg></button>
+  <div class="prog" aria-hidden="true"><div class="ticks" id="ticks"></div><i id="progBar"></i></div>
+  <button class="nav-b magnetic" id="nextB" aria-label="Próxima tela"><svg viewBox="0 0 16 16"><path d="M6 3l5 5-5 5"/></svg></button>
+  <span class="hint"><kbd>←</kbd><kbd>→</kbd> navegar · <kbd>M</kbd> capítulos</span>
+</footer>
+
+<nav class="menu" id="menu" aria-label="Capítulos da apresentação" aria-hidden="true">
+  <div>
+    <h3>Lactalis<br>na Operação</h3>
+    <p class="m-sub">Plano estratégico · Food Service · Piloto Bidfood SP</p>
+  </div>
+  <ol id="menuList"></ol>
+  <button class="nav-b menu-close" id="menuClose" aria-label="Fechar capítulos"><svg viewBox="0 0 16 16"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
+</nav>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Imagem ampliada" aria-hidden="true">
+  <div class="lb-stage" id="lbStage"></div>
+  <p class="lb-cap" id="lbCap"></p>
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Fechar"><svg viewBox="0 0 16 16"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Imagem anterior"><svg viewBox="0 0 16 16"><path d="M10 3L5 8l5 5"/></svg></button>
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Próxima imagem"><svg viewBox="0 0 16 16"><path d="M6 3l5 5-5 5"/></svg></button>
+</div>
+
+<div class="cur cur-ring" id="curRing" aria-hidden="true"><span id="curLabel">AMPLIAR</span></div>
+<div class="cur cur-dot" id="curDot" aria-hidden="true"></div>
+<p class="sr" id="live" aria-live="polite"></p>
+
+<main id="deck" aria-roledescription="apresentação" aria-label="Lactalis na Operação — plano estratégico de entrada em Food Service">
