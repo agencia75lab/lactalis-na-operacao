@@ -1,29 +1,28 @@
-# Lactalis na Operação · apresentação 75LAB
+# Lactalis na Operação · Lactalis × 75 LAB
 
-Apresentação HTML interativa do **plano estratégico de entrada em Food Service da Lactalis Brasil** (piloto Bidfood São Paulo, outubro de 2026), produzida pela 75LAB.
+Apresentação HTML da proposta 75 LAB para a entrada da **Lactalis Brasil em Food Service** (piloto Bidfood São Paulo, outubro de 2026).
+
+- **Proposta comercial (15 telas):** https://projetos.75lab.com.br/lactalis-na-operacao/
+- **Plano completo (42 telas):** https://projetos.75lab.com.br/lactalis-na-operacao/completa/
 
 ## Estrutura
 
 ```
-assets/images/   logos (Lactalis Brasil, 75LAB) e portfólio 75LAB
-src/             fonte, em partes concatenadas na ordem do nome
-  01-head.html     título, fontes, tokens e CSS principal
-  02-chrome.html   header com logos, rodapé, menu de capítulos, lightbox, cursor
-  03..06-slides    as 42 telas, por capítulo
-  07-script.html   ícones animados, motor de navegação, count-ups, lightbox, cursor, fundo
-build.ps1        gera index.html (fragmento para Artifact claude.ai) e docs/index.html (GitHub Pages)
-serve.ps1        servidor estático local opcional (http://localhost:8765)
-docs/            versão publicável no GitHub Pages (Settings → Pages → branch main, pasta /docs)
+index.html            proposta comercial (gerado)
+completa/index.html   plano completo (gerado)
+artifact/             versões para publicar como Artifact claude.ai (geradas)
+assets/images/        logos (Lactalis Brasil, 75 LAB) e portfólio 75 LAB
+src/
+  01-head.html        título, fontes, tokens e CSS principal
+  02-chrome.html      header com logos, rodapé, capítulos, lightbox, cursor
+  03..06-slides-*.html  telas do plano completo, por capítulo
+  07-script.html      ícones animados, navegação, count-ups, lightbox, cursor, fundo
+  pitch/slides.html   telas da proposta comercial
+build.ps1             gera index.html, completa/ e artifact/
+serve.ps1             servidor estático local opcional
 ```
 
-Sem dependências de build: HTML, CSS e JavaScript puros. Fontes via Google Fonts (Archivo, Big Shoulders Display, Space Mono).
-
-## Uso
-
-- Navegação: ← → / espaço / PageUp/PageDown / roda do mouse / swipe / clique (lado esquerdo volta). `M` abre os capítulos. Home/End.
-- Deep link: `#s12` abre a tela 12.
-- Em telas ≤ 820 px a apresentação vira rolagem vertical com layouts reorganizados.
-- `prefers-reduced-motion` desliga animações; máquinas com ≤ 4 núcleos usam modo leve.
+HTML, CSS e JavaScript puros, sem dependências. Fontes via Google Fonts (Archivo, Big Shoulders Display, Space Mono).
 
 ## Rebuild
 
@@ -31,22 +30,13 @@ Sem dependências de build: HTML, CSS e JavaScript puros. Fontes via Google Font
 powershell -ExecutionPolicy Bypass -File .\build.ps1
 ```
 
-## Publicar no GitHub Pages
+## Uso
 
-```bash
-git init
-git add .
-git commit -m "Lactalis na Operação: apresentação 75LAB"
-git branch -M main
-git remote add origin https://github.com/<org>/lactalis-food-service-75lab.git
-git push -u origin main
-```
-
-Depois: Settings → Pages → Deploy from a branch → `main` / `/docs`. Atenção: em repositório público o plano estratégico do cliente fica acessível a qualquer pessoa.
+← → / espaço / PageUp/PageDown / roda do mouse / swipe / clique. `M` abre os capítulos. Deep link: `#s5`. Em telas ≤ 820 px a apresentação vira rolagem vertical.
 
 ## Pendências de conteúdo
 
-- Dados institucionais da 75LAB: razão social, CNPJ, endereço, telefone (marcados `[preencher]` na última tela).
-- Apresentador: nome, cargo, e-mail, telefone.
+- Dados institucionais da 75 LAB (razão social, CNPJ, endereço, telefone) e do apresentador: marcados `[preencher]`.
+- Investimento do Nível 1 na tela de proposta: `[a preencher]`.
 - Mockups do kit são conceitos ilustrativos; SKUs, claims, fotos e fichas técnicas dependem do time Lactalis.
 - Regras de mídia e compartilhamento de dados do MyBidfood a confirmar com a Bidfood.
