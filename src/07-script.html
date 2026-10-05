@@ -21,6 +21,11 @@
 .gal .frame{min-height:0}
 .is-active .iso .layer{transform:translateZ(calc(var(--k)*var(--u)*3.6))}
 .trk .mode h3{font-size:calc(var(--u)*4.2)}
+/* QA visual (desktop 1440x810): dash-draw quebra com vector-effect + preserveAspectRatio=none -> fade */
+.draw[vector-effect]{stroke-dasharray:none;stroke-dashoffset:0;opacity:0;transition:opacity 1.2s var(--ease) calc(var(--d,0s) + var(--i,0)*.12s + .5s)}
+.is-active .draw[vector-effect]{opacity:1}
+.mkt .mega{font-size:calc(var(--u)*14)}
+.mkt .ringbox svg{width:calc(var(--u)*9);height:calc(var(--u)*9)}
 @media (max-width:820px){
   .gal{grid-template-rows:none}
   .loop,.eco{width:100%!important;max-width:440px}
