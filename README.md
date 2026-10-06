@@ -2,7 +2,7 @@
 
 Apresentação HTML da proposta 75 LAB para a entrada da **Lactalis Brasil em Food Service** (piloto Bidfood São Paulo, outubro de 2026).
 
-- **Proposta comercial (15 telas):** https://agencia75lab.github.io/lactalis-na-operacao/
+- **Proposta comercial (12 telas):** https://agencia75lab.github.io/lactalis-na-operacao/
 - **Plano completo (42 telas):** https://agencia75lab.github.io/lactalis-na-operacao/completa/
 
 ## Estrutura
@@ -18,6 +18,7 @@ src/
   03..06-slides-*.html  telas do plano completo, por capítulo
   07-script.html      ícones animados, navegação, count-ups, lightbox, cursor, fundo
   pitch/slides.html   telas da proposta comercial
+  partials/           trechos compartilhados pelas duas versões (mapa competitivo, cronograma)
 build.ps1             gera index.html, completa/ e artifact/
 serve.ps1             servidor estático local opcional
 ```
@@ -40,3 +41,14 @@ powershell -ExecutionPolicy Bypass -File .\build.ps1
 - Investimento do Nível 1 na tela de proposta: `[a preencher]`.
 - Mockups do kit são conceitos ilustrativos; SKUs, claims, fotos e fichas técnicas dependem do time Lactalis.
 - Regras de mídia e compartilhamento de dados do MyBidfood a confirmar com a Bidfood.
+
+## Critério de cor (proposta)
+
+- **Azul-noite:** momentos de marca e virada da história: capa, quem somos, a solução (reveal) e encerramento.
+- **Branco-leite:** conteúdo de trabalho: agenda, diagnóstico, mercado, concorrência, estratégia, kit, cronograma, rastreamento e investimento.
+
+## Fontes do mapa competitivo
+
+Posições são leitura qualitativa 75 LAB a partir dos sites oficiais (consulta em 06/10/2026):
+- https://www.nestleprofessional.com.br/
+- https://www.unileverfoodsolutions.com.br/sobre-unilever-food-solutions.html

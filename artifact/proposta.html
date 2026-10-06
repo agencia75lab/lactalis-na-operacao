@@ -1126,7 +1126,7 @@ body.mode-scroll .hdr .chap{display:none}
       </div>
       <aside class="cm-read" data-a="right" data-d=".3s">
         <span class="mono">Como ler</span>
-        <p>Cada ponto é uma <b>leitura qualitativa da 75 LAB</b> sobre o que a empresa publica no próprio site. Não é medição de mercado. <b>Passe o mouse ou toque nos pontos</b> para ver a fonte.</p>
+        <p>Cada ponto é uma <b>leitura qualitativa da 75 LAB</b> sobre o que a empresa publica no próprio site. Não é medição de mercado. <span class="hover-hint"><b>Passe o mouse ou toque nos pontos</b> para ver a fonte.</span><span class="mob-hint">As fontes de cada ponto estão logo abaixo do mapa.</span></p>
         <span class="mono">O que as fontes mostram</span>
         <p>Nestlé Professional e Unilever Food Solutions oferecem receitas, consultoria de cardápio e treinamento para a <b>equipe do cliente</b>. Nas páginas consultadas, não identificamos ferramentas para o <b>vendedor do distribuidor</b>.</p>
       </aside>
@@ -1508,12 +1508,21 @@ body.mode-scroll .hdr .chap{display:none}
 .cm-read .mono+p{margin-bottom:calc(var(--u)*.6)}
 .cm-read p{font-size:var(--t-small);color:var(--mut);line-height:1.45}
 .cm-read b{color:var(--fg);font-weight:600}
+.cm-notes{display:none}
+.mob-hint{display:none}
 @media (max-width:820px){
   .cmap-wrap{grid-template-columns:minmax(0,1fr)}
   .cm-plot{min-height:360px}
   .pt .lb{font-size:11px;white-space:normal;max-width:120px}
-  .tip{position:fixed;left:16px;right:16px;bottom:calc(env(safe-area-inset-bottom,0px) + 76px);top:auto!important;width:auto;min-width:0;z-index:60}
-  .tip::before{display:none}
+  .pt .tip,.pt .lb i{display:none}
+  .pt{cursor:default}
+  .cm-notes{display:grid!important;gap:10px}
+  .cm-note{background:var(--ink);color:#DCE8F2;border-radius:10px;padding:12px 14px;font-size:13px;line-height:1.45}
+  .cm-note b{display:block;color:#fff;margin-bottom:4px}
+  .cm-note em{display:block;font-style:normal;color:var(--lime);margin-top:6px}
+  .cm-note a{display:inline-block;margin-top:8px;color:var(--sky);text-decoration:underline;word-break:break-all}
+  .cm-note small{display:block;font-family:var(--f-mono);font-size:10px;color:#9DB6CE;margin-top:6px}
+  .hover-hint{display:none}.mob-hint{display:inline}
   .cmap .ax-x{flex-direction:column;gap:4px}
 }
 
@@ -1942,6 +1951,12 @@ doc.querySelectorAll('.pt').forEach(function(p){
   });
 });
 doc.addEventListener('click',function(e){ if(!e.target.closest('.pt')) doc.querySelectorAll('.pt.open').forEach(function(x){x.classList.remove('open');x.setAttribute('aria-expanded','false');}); });
+/* no celular os balões viram cartões fixos abaixo do mapa (fontes sempre visíveis) */
+doc.querySelectorAll('.cmap-wrap').forEach(function(wr){
+  var box=doc.createElement('div');box.className='cm-notes';
+  wr.querySelectorAll('.pt .tip').forEach(function(t){var c=doc.createElement('div');c.className='cm-note';c.innerHTML=t.innerHTML;box.appendChild(c);});
+  wr.appendChild(box);
+});
 
 /* ---------- copy ---------- */
 doc.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(e){
