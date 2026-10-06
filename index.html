@@ -1611,7 +1611,11 @@ body.mode-scroll .hdr .chap{display:none}
 .ins .ic{--s:calc(var(--u)*2.6)}
 .closing .fin{font-size:calc(var(--u)*4)}
 .closing .lines{gap:calc(var(--u)*.5)}
-@media (max-width:820px){.opener .chno{top:30%;font-size:44vw;opacity:.25}}
+@media (max-width:820px){
+  .opener .chno{display:none}
+  .journey{grid-template-columns:minmax(0,1fr)!important}
+  .kpi-dims .d{grid-template-columns:minmax(0,1fr);gap:4px}
+}
 
 /* tema claro: rastreamento e cadeia */
 .slide[data-theme="light"] .trk .mode{border-color:var(--line);background:#fff}
