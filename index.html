@@ -335,7 +335,7 @@ body.has-cursor .zoomable{cursor:none}
 .mkt{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:calc(var(--u)*5);align-items:center;flex:1;min-height:0}
 .mega{font-family:var(--f-display);font-weight:800;font-size:calc(var(--u)*17);line-height:.8;letter-spacing:-.01em;color:var(--fg)}
 .mega small{font-size:.32em;color:var(--sky);margin-left:.15em;letter-spacing:.02em}
-.mega .cur{font-size:.32em;vertical-align:top;color:var(--mut);margin-right:.12em}
+.mega .cur-sym{font-size:.32em;vertical-align:top;color:var(--mut);margin-right:.12em}
 .ringbox{display:flex;align-items:center;gap:calc(var(--u)*2)}
 .ringbox svg{width:calc(var(--u)*13);height:calc(var(--u)*13);min-width:96px;min-height:96px;transform:rotate(-90deg)}
 .ringbox circle{fill:none;stroke-width:7}
@@ -888,6 +888,20 @@ body.mode-scroll .hdr .chap{display:none}
 <!-- title: Lactalis na Operação · Lactalis × 75 LAB -->
 <style>
 /* pitch-only compositions */
+.ins2 .ins{padding:calc(var(--u)*1.1) calc(var(--u)*1.3);gap:calc(var(--u)*.5)}
+.ins2 .ins .ic{display:none}
+.ins2 .cards{gap:calc(var(--u)*.8)}
+.lv .card{padding:calc(var(--u)*1.4) calc(var(--u)*1.8);gap:calc(var(--u)*.6)}
+.lv .card .num{font-size:calc(var(--u)*3.4)}
+.lv .card h3{font-size:calc(var(--u)*1.9)}
+.lv .card ul{gap:4px}
+.lv .card li{font-size:max(12px,calc(var(--u)*.92))}
+.deal .cta-box{padding:calc(var(--u)*1.1) calc(var(--u)*1.6)}
+.deal .cta-box .num{font-size:calc(var(--u)*4.4)}
+.deal .cta-box p{font-size:calc(var(--t-body)*1.05)}
+.deal li{padding-top:calc(var(--u)*.6)}
+.deal li b{font-size:calc(var(--u)*1.9)}
+#p5 .wrap{gap:calc(var(--u)*1.4)}
 .lab .creds{gap:calc(var(--u)*2.4);margin-top:calc(var(--u)*1.6);flex-wrap:nowrap}
 .lab .creds .num{font-size:calc(var(--u)*4)}
 .mkt2 .mega{font-size:calc(var(--u)*12.5)}
@@ -998,13 +1012,13 @@ body.mode-scroll .hdr .chap{display:none}
     <p class="eyebrow" data-a="left">O que vamos discutir hoje</p>
     <h2 class="tk">Cinco paradas entre <em>um pedido de materiais</em> e um modelo de entrada que se paga em aprendizado.</h2>
     <div class="route" id="route">
-      <svg class="path" viewBox="0 0 1000 400" preserveAspectRatio="none" aria-hidden="true"><path id="routePath" class="draw" pathLength="1" d="M60,300 C130,300 190,110 260,110 S390,300 460,300 S590,110 660,110 S770,300 840,300" fill="none" stroke="var(--sky)" stroke-width="2" vector-effect="non-scaling-stroke" style="--d:.2s"/></svg>
+      <svg class="path" viewBox="0 0 1000 400" preserveAspectRatio="none" aria-hidden="true"><path id="routePath" class="draw" pathLength="1" d="M60,270 C130,270 190,90 260,90 S390,270 460,270 S590,90 660,90 S770,270 840,270" fill="none" stroke="var(--sky)" stroke-width="2" vector-effect="non-scaling-stroke" style="--d:.2s"/></svg>
       <i class="ic truck" data-ic="truck" aria-hidden="true"></i>
-      <button class="stop" style="left:6%;top:75%" data-goto="p1" data-a="up"><span class="dot"></span><span class="n">01</span><span class="t">O desafio</span><span class="q">O que foi pedido, o mercado e quem já ocupa o espaço</span></button>
-      <button class="stop up" style="left:26%;top:27.5%" data-goto="p2" data-a="down"><span class="dot"></span><span class="q">O insight que destrava o canal</span><span class="t">A estratégia</span><span class="n">02</span></button>
-      <button class="stop" style="left:46%;top:75%" data-goto="p3" data-a="up"><span class="dot"></span><span class="n">03</span><span class="t">A solução</span><span class="q">Lactalis na Operação e o kit de categoria</span></button>
-      <button class="stop up" style="left:66%;top:27.5%" data-goto="p4" data-a="down"><span class="dot"></span><span class="q">Cronograma, rastreamento e ganhos</span><span class="t">Execução</span><span class="n">04</span></button>
-      <button class="stop" style="left:84%;top:75%" data-goto="p5" data-a="up"><span class="dot"></span><span class="n">05</span><span class="t">Proposta</span><span class="q">Escopo, investimento e próximo passo</span></button>
+      <button class="stop" style="left:6%;top:67.5%" data-goto="p1" data-a="up"><span class="dot"></span><span class="n">01</span><span class="t">O desafio</span><span class="q">O que foi pedido, o mercado e quem já ocupa o espaço</span></button>
+      <button class="stop up" style="left:26%;top:22.5%" data-goto="p2" data-a="down"><span class="dot"></span><span class="q">O insight que destrava o canal</span><span class="t">A estratégia</span><span class="n">02</span></button>
+      <button class="stop" style="left:46%;top:67.5%" data-goto="p3" data-a="up"><span class="dot"></span><span class="n">03</span><span class="t">A solução</span><span class="q">Lactalis na Operação e o kit de categoria</span></button>
+      <button class="stop up" style="left:66%;top:22.5%" data-goto="p4" data-a="down"><span class="dot"></span><span class="q">Cronograma, rastreamento e ganhos</span><span class="t">Execução</span><span class="n">04</span></button>
+      <button class="stop" style="left:84%;top:67.5%" data-goto="p5" data-a="up"><span class="dot"></span><span class="n">05</span><span class="t">Proposta</span><span class="q">Escopo, investimento e próximo passo</span></button>
     </div>
   </div>
 </section>
@@ -1046,7 +1060,7 @@ body.mode-scroll .hdr .chap{display:none}
     <div class="body">
       <div class="mkt2">
         <div data-a="blur">
-          <div class="mega"><span class="cur">R$</span><span data-count="287.9" data-dec="1">0</span><small>bi</small></div>
+          <div class="mega"><span class="cur-sym">R$</span><span data-count="287.9" data-dec="1">0</span><small>bi</small></div>
           <p class="lead" style="margin-top:calc(var(--u)*1.6)">movimentados pelo Food Service brasileiro em 2025. <strong>Produto sem aplicação, treinamento e serviço vira commodity.</strong></p>
         </div>
         <div class="side">
@@ -1439,6 +1453,18 @@ body.mode-scroll .hdr .chap{display:none}
 .draw[vector-effect]{stroke-dasharray:none;stroke-dashoffset:0;opacity:0;transition:opacity 1.2s var(--ease) calc(var(--d,0s) + var(--i,0)*.12s + .5s)}
 .is-active .draw[vector-effect]{opacity:1}
 .mkt .mega{font-size:calc(var(--u)*14)}
+/* QA por DOM (1440x810): nada abaixo do rodapé nem fora da largura */
+.src{position:static;margin-top:calc(var(--u)*.8);max-width:none}
+.gantt{row-gap:calc(var(--u)*.45)}
+.gantt .gb{height:calc(var(--u)*3.5);min-height:30px}
+.gantt .ph b{font-size:max(12px,calc(var(--u)*.95))}
+.gantt .ph span:not(.owner){display:none}
+.gantt .ms em{bottom:calc(var(--u)*-2.2)}
+.web .bn{width:calc(var(--u)*19);min-width:150px;padding:calc(var(--u)*.9)}
+.web .hub{width:calc(var(--u)*13)}
+.web{margin:calc(var(--u)*3) 0 calc(var(--u)*4.2)}
+.loop,.eco{width:min(100%,calc(var(--u)*25))!important}
+.loop .pn .d{font-size:max(11px,calc(var(--u)*.8))}
 .mkt .ringbox svg{width:calc(var(--u)*9);height:calc(var(--u)*9)}
 @media (max-width:820px){
   .gal{grid-template-rows:none}

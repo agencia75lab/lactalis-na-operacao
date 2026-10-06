@@ -25,6 +25,18 @@
 .draw[vector-effect]{stroke-dasharray:none;stroke-dashoffset:0;opacity:0;transition:opacity 1.2s var(--ease) calc(var(--d,0s) + var(--i,0)*.12s + .5s)}
 .is-active .draw[vector-effect]{opacity:1}
 .mkt .mega{font-size:calc(var(--u)*14)}
+/* QA por DOM (1440x810): nada abaixo do rodapé nem fora da largura */
+.src{position:static;margin-top:calc(var(--u)*.8);max-width:none}
+.gantt{row-gap:calc(var(--u)*.45)}
+.gantt .gb{height:calc(var(--u)*3.5);min-height:30px}
+.gantt .ph b{font-size:max(12px,calc(var(--u)*.95))}
+.gantt .ph span:not(.owner){display:none}
+.gantt .ms em{bottom:calc(var(--u)*-2.2)}
+.web .bn{width:calc(var(--u)*19);min-width:150px;padding:calc(var(--u)*.9)}
+.web .hub{width:calc(var(--u)*13)}
+.web{margin:calc(var(--u)*3) 0 calc(var(--u)*4.2)}
+.loop,.eco{width:min(100%,calc(var(--u)*25))!important}
+.loop .pn .d{font-size:max(11px,calc(var(--u)*.8))}
 .mkt .ringbox svg{width:calc(var(--u)*9);height:calc(var(--u)*9)}
 @media (max-width:820px){
   .gal{grid-template-rows:none}
