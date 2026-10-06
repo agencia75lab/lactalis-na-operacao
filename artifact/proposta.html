@@ -878,135 +878,147 @@ body.mode-scroll .hdr .chap{display:none}
 <main id="deck" aria-roledescription="apresentação" aria-label="Lactalis na Operação — plano estratégico de entrada em Food Service">
 
 <!-- title: Lactalis na Operação · Lactalis × 75 LAB -->
+<!--
+  Critério de cor (proposta):
+  azul-noite = momentos de marca e virada da história (capa, quem somos, a solução, encerramento)
+  branco-leite = conteúdo de trabalho (agenda, diagnóstico, mercado, concorrência, estratégia, kit, cronograma, rastreamento, investimento)
+-->
 <style>
-/* pitch-only compositions */
-.ins2 .ins{padding:calc(var(--u)*1.1) calc(var(--u)*1.3);gap:calc(var(--u)*.5)}
-.ins2 .ins .ic{display:none}
-.ins2 .cards{gap:calc(var(--u)*.8)}
-.lv .card{padding:calc(var(--u)*1.4) calc(var(--u)*1.8);gap:calc(var(--u)*.6)}
-.lv .card .num{font-size:calc(var(--u)*3.4)}
-.lv .card h3{font-size:calc(var(--u)*1.9)}
-.lv .card ul{gap:4px}
-.lv .card li{font-size:max(12px,calc(var(--u)*.92))}
-.deal .cta-box{padding:calc(var(--u)*1.1) calc(var(--u)*1.6)}
-.deal .cta-box .num{font-size:calc(var(--u)*4.4)}
-.deal .cta-box p{font-size:calc(var(--t-body)*1.05)}
-.deal li{padding-top:calc(var(--u)*.6)}
-.deal li b{font-size:calc(var(--u)*1.9)}
-#p5 .wrap{gap:calc(var(--u)*1.4)}
-#p1 .vs{row-gap:calc(var(--u)*1.1)}
-.slide .loop{width:min(100%,calc(var(--u)*19))!important}
-.lab .creds{gap:calc(var(--u)*2.4);margin-top:calc(var(--u)*1.6);flex-wrap:nowrap}
-.lab .creds .num{font-size:calc(var(--u)*4)}
-.mkt2 .mega{font-size:calc(var(--u)*12.5)}
-.mkt2 .side{gap:calc(var(--u)*1.4)!important}
-.mkt2 .side .num{font-size:calc(var(--u)*4)!important}
-.mkt2 .ringbox svg{width:calc(var(--u)*8);height:calc(var(--u)*8);min-width:64px;min-height:64px}
+/* ---------- 02 · 75LAB ---------- */
 .services{display:flex;flex-wrap:wrap;gap:8px;margin-top:calc(var(--u)*2)}
 .services .chip{background:transparent;color:var(--fg)}
-.lab .claim{font-size:calc(var(--u)*4.6)}
-.mini-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*2);padding-top:calc(var(--u)*1.4);border-top:1px solid var(--line)}
-.mini-stats .num{font-size:calc(var(--u)*3.4);color:var(--navy)}
-.mini-stats .num small{font-size:.45em;color:#1F7FC0;margin-left:.1em}
-.mkt2{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:calc(var(--u)*4);align-items:center;flex:1;min-height:0}
-.mkt2 .side{display:grid;gap:calc(var(--u)*2.2)}
-.mkt2 .side .num{font-size:calc(var(--u)*5.2)}
-.ins2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:calc(var(--u)*4);align-items:center;flex:1;min-height:0}
-.ins2 .big{font-size:calc(var(--u)*4.1);line-height:1.06;font-weight:680;letter-spacing:-.02em;font-variation-settings:"wdth" 112;text-wrap:balance}
-.ins2 .big span{color:var(--sky)}
-.ins2 .cards{display:grid;gap:calc(var(--u)*1.1)}
-.morph{display:grid;gap:calc(var(--u)*1.2)}
-.morph .from{font-size:var(--t-lead);color:var(--mut);text-decoration:line-through;text-decoration-color:var(--coral);text-decoration-thickness:1.5px}
-.morph .to{font-size:calc(var(--u)*2.4);font-weight:680;line-height:1.15;font-variation-settings:"wdth" 108}
-.morph .to b{color:var(--sky);font-weight:680}
-.morph svg{width:calc(var(--u)*4);height:calc(var(--u)*4);min-width:30px;min-height:30px}
-.morph svg path{fill:none;stroke:var(--sky);stroke-width:1.6}
-.chain{display:flex;align-items:center;flex-wrap:wrap;gap:6px}
-.chain span{font-family:var(--f-mono);font-size:var(--t-mono);letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:99px;border:1px solid rgba(192,238,78,.4);color:#E4F7B8}
-.chain span:last-child{background:var(--lime);color:var(--ink);border-color:var(--lime)}
-.chain i{color:var(--lime);font-style:normal}
-.deal{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:calc(var(--u)*2);align-items:stretch}
-.deal .cta-box{margin:0}
-.deal ol{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*1.4)}
-.deal li{font-size:var(--t-small);line-height:1.35;padding-top:calc(var(--u)*1);border-top:2px solid var(--line);display:flex;flex-direction:column;gap:4px}
-.deal li b{font-family:var(--f-display);font-size:calc(var(--u)*2.6);line-height:.9;color:var(--navy)}
-.lv .card .inv{margin-top:auto;display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding-top:calc(var(--u)*1);border-top:1px solid rgba(255,255,255,.2)}
-.lv .card.l2 .inv{border-color:var(--line)}
-.lv .card .inv .tbd{font-family:var(--f-mono);font-size:var(--t-mono);color:var(--lime);letter-spacing:.06em}
-.lv .card.l2 .inv .tbd{color:var(--coral)}
-.lv .card{padding:calc(var(--u)*1.8);gap:calc(var(--u)*.9)}
-.lv .card .num{font-size:calc(var(--u)*4.4)}
-.lv .card h3{font-size:calc(var(--u)*2.1)}
-.end{display:grid;grid-template-rows:auto auto;gap:calc(var(--u)*2.6);flex:1;align-content:center}
-.end .fin{font-size:calc(var(--u)*4.2)!important;max-width:24ch!important;margin:0!important}
-.end .inst{flex:none}
-.end .inst dl{gap:5px 14px}
-/* slide 2 · 75LAB: mais respiro */
 #lab .tk{font-size:calc(var(--t-h)*.9)}
 #lab .lab{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:calc(var(--u)*3.6)}
 #lab .claim{font-size:calc(var(--u)*3.7);line-height:1.02;letter-spacing:.01em}
-#lab .creds{margin-top:calc(var(--u)*2.4);gap:calc(var(--u)*2.8)}
+#lab .creds{margin-top:calc(var(--u)*2.4);gap:calc(var(--u)*2.8);flex-wrap:nowrap}
 #lab .creds .num{font-size:calc(var(--u)*3.3)}
 #lab .creds .cap{font-size:max(12px,calc(var(--u)*.88));margin-top:8px;line-height:1.35}
 #lab .services{margin-top:calc(var(--u)*2.6);gap:6px}
 #lab .services .chip{font-size:max(11.5px,calc(var(--u)*.8));padding:.32em .85em}
 #lab .pgal{gap:calc(var(--u)*.8)}
-/* slide 14 · investimento */
-.inv-grid{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.5fr);gap:calc(var(--u)*2.6);flex:1;min-height:0;align-items:start}
-.inv-total{border:1px solid rgba(192,238,78,.35);border-radius:calc(var(--u)*1.1);padding:calc(var(--u)*1.6);display:flex;flex-direction:column;gap:calc(var(--u)*.9);background:linear-gradient(160deg,rgba(192,238,78,.07),transparent 65%)}
-.inv-value{font-family:var(--f-display);font-weight:800;font-size:calc(var(--u)*3.6);line-height:1;color:#fff}
-.inv-value .tbd{color:var(--lime);font-size:.62em;font-family:var(--f-mono);font-weight:400;letter-spacing:.02em}
+
+/* ---------- 04 · desafio + mercado ---------- */
+.dm{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.85fr);gap:calc(var(--u)*3.2);flex:1;min-height:0;align-items:center}
+.dm .vs{grid-template-columns:minmax(0,.8fr) calc(var(--u)*4.6) minmax(0,1.25fr);row-gap:calc(var(--u)*1.4)}
+.dm .vs .said{font-size:var(--t-body);line-height:1.3}
+.dm .vs .need{font-size:var(--t-small)}
+.dm .vs .need b{font-size:calc(var(--t-body)*1.06)}
+.mk{background:var(--navy);color:#fff;border-radius:calc(var(--u)*1.2);padding:calc(var(--u)*1.9);display:grid;gap:calc(var(--u)*1.3)}
+.mk .mono{color:var(--sky)}
+.mk .big{font-family:var(--f-display);font-weight:800;font-size:calc(var(--u)*6);line-height:.95;padding-top:.06em}
+.mk .big small{font-size:.4em;color:var(--sky);margin-left:.1em}
+.mk .big .cur-sym{font-size:.34em;color:#9DB6CE;margin-right:.15em;vertical-align:.95em}
+.mk .row2{display:grid;grid-template-columns:auto minmax(0,1fr);gap:calc(var(--u)*1.2);align-items:center;padding-top:calc(var(--u)*1.1);border-top:1px solid rgba(255,255,255,.16)}
+.mk .row2 .n{font-family:var(--f-display);font-weight:800;font-size:calc(var(--u)*3.2);line-height:1;color:#fff;white-space:nowrap}
+.mk p{font-size:var(--t-small);color:#C9DDF0;line-height:1.35}
+.mk .ringmini{width:calc(var(--u)*4.6);height:calc(var(--u)*4.6);min-width:42px;min-height:42px;transform:rotate(-90deg)}
+.mk .ringmini circle{fill:none;stroke-width:7}
+.mk .ringmini .bgc{stroke:rgba(255,255,255,.16)}
+.mk .ringmini .fgc{stroke:var(--sky);stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:100;transition:stroke-dashoffset 2s var(--ease) .7s}
+.mk .src{color:#9DB6CE;margin-top:0}
+.mk .src::before{color:var(--sky)}
+
+/* ---------- 06 · insight + 5 etapas ---------- */
+.ins-lead{font-size:var(--t-lead);color:var(--mut);max-width:72ch;line-height:1.4}
+.ins-lead strong{color:var(--fg);font-weight:600}
+.cyc{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:calc(var(--u)*1.8);padding-bottom:calc(var(--u)*5.4)}
+.cyc .rail{position:absolute;left:10%;right:10%;top:calc(max(56px,var(--u)*6.6)/2);height:2px;background:linear-gradient(90deg,var(--navy),var(--sky))}
+.cy{display:flex;flex-direction:column;align-items:center;text-align:center;gap:calc(var(--u)*.7);position:relative;z-index:1}
+.cy .ic{--s:max(56px,calc(var(--u)*6.6));background:#fff;border-radius:50%;padding:calc(var(--u)*1.6);box-shadow:0 14px 34px -18px rgba(0,40,80,.45);border:1px solid var(--line)}
+.cy .n{font-family:var(--f-display);font-weight:800;font-size:calc(var(--u)*2.4);line-height:1;color:#1F7FC0;margin-top:calc(var(--u)*.3)}
+.cy .t{font-weight:700;font-size:calc(var(--t-body)*1.1);line-height:1.15;font-variation-settings:"wdth" 106}
+.cy .d{font-size:var(--t-small);color:var(--mut);line-height:1.38;max-width:24ch}
+.cyc .ret{position:absolute;left:10%;right:10%;bottom:0;height:calc(var(--u)*4.4)}
+.cyc .ret svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.cyc .ret path{fill:none;stroke:var(--navy);stroke-width:1.6;stroke-dasharray:5 6}
+.cyc .ret .head{position:absolute;left:-6px;top:-4px;width:12px;height:12px;border-left:1.6px solid var(--navy);border-top:1.6px solid var(--navy);transform:rotate(45deg)}
+.cyc .ret span{position:absolute;left:50%;bottom:calc(var(--u)*-.6);transform:translateX(-50%);background:var(--bg);padding:0 14px;font-family:var(--f-mono);font-size:var(--t-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--navy);white-space:nowrap}
+
+/* ---------- 10 · rastreamento ---------- */
+.chain{display:flex;align-items:center;flex-wrap:wrap;gap:6px}
+.chain span{font-family:var(--f-mono);font-size:var(--t-mono);letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:99px;border:1px solid rgba(192,238,78,.4);color:#E4F7B8}
+.chain span:last-child{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+.chain i{color:var(--lime);font-style:normal}
+
+/* ---------- 11 · proposta e investimento ---------- */
+.inv-grid{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.5fr);gap:calc(var(--u)*2.6);flex:1;min-height:0;align-items:start}
+.inv-side{display:grid;gap:calc(var(--u)*1.1)}
+.inv-total{border-radius:calc(var(--u)*1.1);padding:calc(var(--u)*1.6);display:flex;flex-direction:column;gap:calc(var(--u)*.7);background:var(--navy);color:#fff}
+.inv-total h3{margin:0;font-size:calc(var(--u)*1.9);line-height:1.1;font-weight:720;font-variation-settings:"wdth" 112}
+.inv-value{font-family:var(--f-display);font-weight:800;font-size:calc(var(--u)*3.4);line-height:1;color:#fff}
+.inv-total .tbd{color:var(--lime);font-family:var(--f-mono);font-size:var(--t-mono);letter-spacing:.04em;font-weight:400}
+.inv-value .tbd{font-size:.5em}
 .inv-total dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:5px 12px;font-size:var(--t-small)}
-.inv-total dt{font-family:var(--f-mono);font-size:var(--t-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding-top:.2em}
+.inv-total dt{font-family:var(--f-mono);font-size:var(--t-mono);letter-spacing:.12em;text-transform:uppercase;color:#9DB6CE;padding-top:.2em}
 .inv-total dd{margin:0}
-.invest .tbd{color:var(--lime);font-family:var(--f-mono);font-size:var(--t-mono);letter-spacing:.04em;font-style:normal}
-.gets{display:grid;gap:4px;padding-top:calc(var(--u)*.9);border-top:1px solid var(--line)}
-.gets p{font-size:var(--t-small);display:flex;gap:8px}
-.gets p::before{content:"→";color:var(--lime)}
+.inv-n2{border:1.5px dashed rgba(0,75,133,.3);border-radius:calc(var(--u)*1.1);padding:calc(var(--u)*1.2) calc(var(--u)*1.4);display:grid;gap:4px}
+.inv-n2 b{font-size:calc(var(--t-body)*1.05)}
+.inv-n2 p{font-size:var(--t-small);color:var(--mut);line-height:1.35}
 .inv-lines{display:flex;flex-direction:column}
-.inv-row{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.6fr) calc(var(--u)*7);gap:calc(var(--u)*1.2);align-items:center;padding:calc(var(--u)*.62) 0;border-bottom:1px solid var(--line);font-size:var(--t-small);line-height:1.3}
+.inv-row{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.6fr) calc(var(--u)*7);gap:calc(var(--u)*1.2);align-items:center;padding:calc(var(--u)*.6) 0;border-bottom:1px solid var(--line);font-size:var(--t-small);line-height:1.3}
 .inv-row b{display:flex;align-items:center;gap:8px;font-weight:650}
 .inv-row b .ic{--s:calc(var(--u)*2);min-width:22px;min-height:22px}
 .inv-row span{color:var(--mut)}
-.inv-row em{text-align:right}
-.inv-row.head{font-family:var(--f-mono);font-size:var(--t-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding-top:0}
+.inv-row em{text-align:right;font-style:normal;font-family:var(--f-mono);font-size:var(--t-mono);color:#B1462F}
+.inv-row.head{font-family:var(--f-mono);font-size:var(--t-mono);letter-spacing:.12em;text-transform:uppercase;padding-top:0}
 .inv-row.head span{color:var(--mut)}
 .inv-row.head span:last-child{text-align:right}
 .inv-out{font-size:max(11.5px,calc(var(--u)*.86));color:var(--mut);margin-top:calc(var(--u)*.9)}
 .inv-out b{color:var(--fg);font-weight:600}
-.invest .deal li{border-top-color:var(--line)}
-.invest .deal li b{color:var(--lime)}
+.deal{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:calc(var(--u)*2);align-items:stretch}
+.deal .cta-box{margin:0;padding:calc(var(--u)*1.1) calc(var(--u)*1.6)}
+.deal .cta-box .num{font-size:calc(var(--u)*4.2)}
+.deal .cta-box p{font-size:calc(var(--t-body)*1.05)}
+.deal ol{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*1.4)}
+.deal li{font-size:var(--t-small);line-height:1.35;padding-top:calc(var(--u)*.6);border-top:2px solid var(--line);display:flex;flex-direction:column;gap:4px}
+.deal li b{font-family:var(--f-display);font-size:calc(var(--u)*1.9);line-height:.9;color:var(--navy)}
 .invest .wrap{gap:calc(var(--u)*1.5)}
+
+/* ---------- 12 · encerramento ---------- */
+.end{display:grid;grid-template-rows:auto auto;gap:calc(var(--u)*2.6);flex:1;align-content:center}
+.end .fin{font-size:calc(var(--u)*4.2)!important;max-width:24ch!important;margin:0!important}
+.end .inst{flex:none}
+.end .inst dl{gap:5px 14px}
+
 @media (max-width:820px){
-  .inv-grid{grid-template-columns:minmax(0,1fr)}
-  .inv-row{grid-template-columns:minmax(0,1fr) auto}.inv-row span{grid-column:1/-1;order:3}
-  #lab .creds{flex-wrap:wrap}
-  .mini-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .mkt2,.ins2,.deal{grid-template-columns:minmax(0,1fr)}
+  .dm,.inv-grid,.deal{grid-template-columns:minmax(0,1fr)}
+  .dm .vs{grid-template-columns:minmax(0,1fr)}
+  .cyc{grid-template-columns:minmax(0,1fr);padding-bottom:0;gap:18px}
+  .cyc .rail,.cyc .ret{display:none}
+  .cy{flex-direction:row;flex-wrap:wrap;text-align:left;align-items:center;gap:6px 14px}
+  .cy .ic{--s:52px;padding:12px}
+  .cy .d{flex-basis:100%;max-width:none}
+  .inv-row{grid-template-columns:minmax(0,1fr) auto}
+  .inv-row span{grid-column:1/-1;order:3}
+  .inv-row.head{display:none}
   .deal ol{grid-template-columns:minmax(0,1fr)}
-  .ins2 .big{font-size:30px}.morph .to{font-size:22px}
+  #lab .creds{flex-wrap:wrap}
   .end .fin{font-size:30px!important}
 }
 </style>
 
-<!-- 01 · ABERTURA -->
+<!-- 01 · CAPA (estática) -->
 <section class="slide cover" data-theme="dark" data-chapter="Abertura" data-title="Capa" data-orbit="0%,0%,0deg,1,0">
-  <svg class="arcs" viewBox="0 0 240 100" aria-hidden="true"><path d="M18,64 C2,30 60,6 140,6 C170,6 196,10 214,15"/><path d="M222,30 C240,70 180,96 100,95 C80,95 62,93 50,90" opacity=".55"/></svg>
+  <div class="cv-sun" aria-hidden="true"></div>
   <div class="wrap">
-    <p class="eyebrow">Proposta 75 LAB · Entrada da Lactalis em Food Service</p>
-    <h1>Em Food Service, quem brilha é <span>a operação.</span></h1>
-    <p class="sub">Um plano para transformar o portfólio Lactalis em uma recomendação simples, comprovável e repetível na rota da Bidfood, começando por um piloto de 90 dias em São Paulo.</p>
-    <div class="meta">
-      <div><small>Cliente</small>Lactalis Brasil</div>
-      <div><small>Canal do piloto</small>Bidfood · São Paulo</div>
-      <div><small>Formato</small>Piloto de 90 dias</div>
-      <div><small>Data</small>Outubro de 2026</div>
+    <p class="eyebrow">Proposta comercial · Outubro de 2026</p>
+    <div>
+      <h1 class="cv-title"><span>Quem brilha</span><span>é a <em>operação.</em></span></h1>
+      <p class="cv-sub">Plano de entrada da <b>Lactalis</b> em Food Service, com piloto de 90 dias na rota da <b>Bidfood</b>, em São Paulo.</p>
+    </div>
+    <div class="cv-foot">
+      <div class="cv-lock"><img class="lac" src="assets/images/lactalis-brasil.png" alt="Lactalis Brasil"><span aria-hidden="true">×</span><img class="lab" src="assets/images/75lab-lime.png" alt="75 LAB"></div>
+      <div class="meta">
+        <div><small>Cliente</small>Lactalis Brasil</div>
+        <div><small>Canal do piloto</small>Bidfood · São Paulo</div>
+        <div><small>Formato</small>Piloto de 90 dias</div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- 02 · 75LAB -->
-<section class="slide" id="lab" data-theme="dark" data-chapter="Quem somos · 75LAB" data-title="75LAB em um minuto" data-orbit="40%,30%,20deg,1,.2">
+<section class="slide" id="lab" data-theme="dark" data-chapter="Quem somos · 75LAB" data-title="75LAB em um minuto" data-orbit="0%,0%,0deg,1,0">
   <div class="wrap">
     <p class="eyebrow" data-a="left">Quem somos · 75LAB</p>
     <h2 class="tk">Aceleradora de trade marketing: <em>transformamos intenção comercial em resultado no PDV.</em></h2>
@@ -1036,7 +1048,7 @@ body.mode-scroll .hdr .chap{display:none}
 </section>
 
 <!-- 03 · AGENDA -->
-<section class="slide" data-theme="light" data-chapter="Agenda" data-title="Agenda — a rota da conversa" data-orbit="0%,30%,0deg,1.4,.2">
+<section class="slide" data-theme="light" data-chapter="Agenda" data-title="Agenda" data-orbit="0%,0%,0deg,1,0">
   <div class="wrap">
     <p class="eyebrow" data-a="left">O que vamos discutir hoje</p>
     <h2 class="tk">Cinco etapas entre <em>um pedido de materiais</em> e um modelo de entrada que se paga em aprendizado.</h2>
@@ -1044,151 +1056,119 @@ body.mode-scroll .hdr .chap{display:none}
       <svg class="path" viewBox="0 0 1000 400" preserveAspectRatio="none" aria-hidden="true"><path id="routePath" class="draw" pathLength="1" d="M60,270 C130,270 190,90 260,90 S390,270 460,270 S590,90 660,90 S770,270 840,270" fill="none" stroke="var(--sky)" stroke-width="2" vector-effect="non-scaling-stroke" style="--d:.2s"/></svg>
       <i class="ic truck" data-ic="truck" aria-hidden="true"></i>
       <button class="stop" style="left:6%;top:67.5%" data-goto="p1" data-a="up"><span class="dot"></span><span class="n">01</span><span class="t">O desafio</span><span class="q">O que foi pedido, o mercado e quem já ocupa o espaço</span></button>
-      <button class="stop up" style="left:26%;top:22.5%" data-goto="p2" data-a="down"><span class="dot"></span><span class="q">O insight que destrava o canal</span><span class="t">A estratégia</span><span class="n">02</span></button>
+      <button class="stop up" style="left:26%;top:22.5%" data-goto="p2" data-a="down"><span class="dot"></span><span class="q">O insight e as cinco etapas</span><span class="t">A estratégia</span><span class="n">02</span></button>
       <button class="stop" style="left:46%;top:67.5%" data-goto="p3" data-a="up"><span class="dot"></span><span class="n">03</span><span class="t">A solução</span><span class="q">Lactalis na Operação e o kit de categoria</span></button>
-      <button class="stop up" style="left:66%;top:22.5%" data-goto="p4" data-a="down"><span class="dot"></span><span class="q">Cronograma e rastreamento</span><span class="t">Execução</span><span class="n">04</span></button>
-      <button class="stop" style="left:84%;top:67.5%" data-goto="p5" data-a="up"><span class="dot"></span><span class="n">05</span><span class="t">Proposta</span><span class="q">Escopo, investimento e próximo passo</span></button>
+      <button class="stop up" style="left:66%;top:22.5%" data-goto="p4" data-a="down"><span class="dot"></span><span class="q">13 semanas e o Plano de Rastreamento</span><span class="t">Execução</span><span class="n">04</span></button>
+      <button class="stop" style="left:84%;top:67.5%" data-goto="p5" data-a="up"><span class="dot"></span><span class="n">05</span><span class="t">Investimento</span><span class="q">Escopo, valores e próximo passo</span></button>
     </div>
   </div>
 </section>
 
-<!-- 04 · DESAFIO -->
-<section class="slide" id="p1" data-theme="light" data-chapter="01 · O desafio" data-title="O que foi pedido × o que precisa ser resolvido" data-orbit="-40%,-20%,-30deg,.8,.25">
+<!-- 04 · DESAFIO + MERCADO -->
+<section class="slide" id="p1" data-theme="light" data-chapter="01 · O desafio" data-title="Desafio e mercado" data-orbit="0%,0%,0deg,1,0">
   <div class="wrap">
-    <p class="eyebrow" data-a="left">Nossa leitura do briefing</p>
-    <h2 class="tk">A Lactalis já tem escala de líder. <em>Falta uma forma de vender que se repita na rota do distribuidor.</em></h2>
-    <div class="body" style="gap:calc(var(--u)*2.2)">
-      <div class="vs">
-        <div class="h" data-a="fade">O briefing pede</div><div class="h" data-a="fade"></div><div class="h" data-a="fade">O que realmente precisa ser resolvido</div>
-        <p class="said" data-a="left" style="--i:1">“Uma categoria, materiais e ativações.”</p>
-        <svg viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true"><path class="draw" pathLength="1" d="M2,10 H90 M82,3 L94,10 L82,17" vector-effect="non-scaling-stroke" style="--d:.3s"/></svg>
-        <p class="need" data-a="right" style="--i:2"><b>Capacidade de go to market</b>Proposta de valor, narrativa, rotina comercial e aprendizado mensurável.</p>
-        <p class="said" data-a="left" style="--i:3">“Lâmina, catálogo e folder.”</p>
-        <svg viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true"><path class="draw" pathLength="1" d="M2,10 H90 M82,3 L94,10 L82,17" vector-effect="non-scaling-stroke" style="--d:.6s"/></svg>
-        <p class="need" data-a="right" style="--i:4"><b>Um argumento de 30 segundos</b>Que o vendedor repete e que dá ao operador motivo para testar e recomprar.</p>
-        <p class="said" data-a="left" style="--i:5">“Um piloto Bidfood.”</p>
-        <svg viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true"><path class="draw" pathLength="1" d="M2,10 H90 M82,3 L94,10 L82,17" vector-effect="non-scaling-stroke" style="--d:.9s"/></svg>
-        <p class="need" data-a="right" style="--i:6"><b>Um modelo indústria–distribuidor validado</b>Sem escalar custo, mix ou operação antes de saber o que converte.</p>
-      </div>
-      <div class="mini-stats">
-        <div data-a="up" style="--i:0"><span class="num"><span data-count="13">0</span><small>mil+</small></span><p class="k-text">colaboradores</p></div>
-        <div data-a="up" style="--i:1"><span class="num" data-count="23">0</span><p class="k-text">fábricas</p></div>
-        <div data-a="up" style="--i:2"><span class="num"><span data-count="2.9" data-dec="1">0</span><small>bi L</small></span><p class="k-text">de leite captados no ano</p></div>
-        <div data-a="up" style="--i:3"><span class="num" data-count="16">0</span><p class="k-text">marcas no Brasil</p></div>
-      </div>
-      <p class="src">Lactalis Brasil, “Quem somos” (05/10/2026) · transcrição da reunião Lactalis × 75LAB, 16/09/2026</p>
-    </div>
-  </div>
-</section>
-
-<!-- 05 · MERCADO -->
-<section class="slide" data-theme="dark" data-chapter="01 · O desafio" data-title="O tamanho da oportunidade" data-orbit="-34%,10%,30deg,1,.35">
-  <div class="wrap">
-    <p class="eyebrow" data-a="left">Mercado</p>
-    <h2 class="tk">O Food Service já vale <em>quase 3 em cada 10 reais</em> da indústria de alimentos, e quase metade dos pontos está no Sudeste.</h2>
+    <p class="eyebrow" data-a="left">Nossa leitura · desafio e mercado</p>
+    <h2 class="tk">O briefing pede peças. O mercado pede <em>uma forma de vender que se repita na rota.</em></h2>
     <div class="body">
-      <div class="mkt2">
-        <div data-a="blur">
-          <div class="mega"><span class="cur-sym">R$</span><span data-count="287.9" data-dec="1">0</span><small>bi</small></div>
-          <p class="lead" style="margin-top:calc(var(--u)*1.6)">movimentados pelo Food Service brasileiro em 2025. <strong>Produto sem aplicação, treinamento e serviço vira commodity.</strong></p>
+      <div class="dm">
+        <div class="vs">
+          <div class="h" data-a="fade">O briefing pede</div><div class="h" data-a="fade"></div><div class="h" data-a="fade">O que precisa ser resolvido</div>
+          <p class="said" data-a="left" style="--i:1">“Uma categoria, materiais e ativações.”</p>
+          <svg viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true"><path class="draw" pathLength="1" d="M2,10 H90 M82,3 L94,10 L82,17" vector-effect="non-scaling-stroke" style="--d:.3s"/></svg>
+          <p class="need" data-a="right" style="--i:2"><b>Capacidade de go to market</b>Proposta de valor, narrativa, rotina comercial e aprendizado mensurável.</p>
+          <p class="said" data-a="left" style="--i:3">“Lâmina, catálogo e folder.”</p>
+          <svg viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true"><path class="draw" pathLength="1" d="M2,10 H90 M82,3 L94,10 L82,17" vector-effect="non-scaling-stroke" style="--d:.6s"/></svg>
+          <p class="need" data-a="right" style="--i:4"><b>Um argumento de 30 segundos</b>Que o vendedor repete e que dá ao operador motivo para testar e recomprar.</p>
+          <p class="said" data-a="left" style="--i:5">“Um piloto Bidfood.”</p>
+          <svg viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true"><path class="draw" pathLength="1" d="M2,10 H90 M82,3 L94,10 L82,17" vector-effect="non-scaling-stroke" style="--d:.9s"/></svg>
+          <p class="need" data-a="right" style="--i:6"><b>Um modelo indústria–distribuidor validado</b>Sem escalar custo, mix ou operação antes de saber o que converte.</p>
         </div>
-        <div class="side">
-          <div class="ringbox" data-a="right" style="--i:1">
-            <svg viewBox="0 0 40 40" aria-hidden="true"><circle class="bgc" cx="20" cy="20" r="16" pathLength="100"/><circle class="fgc" data-ring="28.3" cx="20" cy="20" r="16" pathLength="100"/></svg>
-            <div><span class="num"><span data-count="28.3" data-dec="1">0</span>%</span><p class="k-text" style="max-width:22ch;margin-top:6px">do faturamento da indústria de alimentos no mercado interno</p></div>
+        <div class="mk" data-a="right" data-d=".3s">
+          <span class="mono">Food Service no Brasil · 2025</span>
+          <div class="big"><span class="cur-sym">R$</span><span data-count="287.9" data-dec="1">0</span><small>bi</small></div>
+          <div class="row2">
+            <svg class="ringmini" viewBox="0 0 40 40" aria-hidden="true"><circle class="bgc" cx="20" cy="20" r="16" pathLength="100"/><circle class="fgc" data-ring="28.3" cx="20" cy="20" r="16" pathLength="100"/></svg>
+            <p><b style="color:#fff;font-size:1.25em"><span data-count="28.3" data-dec="1">0</span>%</b> do faturamento da indústria de alimentos no mercado interno</p>
           </div>
-          <div data-a="right" style="--i:2"><span class="num" data-count="1199142">0</span><p class="k-text" style="margin-top:6px">estabelecimentos; 72% são pequenos, sem área de compras: o vendedor do distribuidor recomenda</p></div>
-          <div data-a="right" style="--i:3">
-            <div class="hbar hl" style="grid-template-columns:calc(var(--u)*8) minmax(0,1fr) calc(var(--u)*6.5)"><span>Sudeste</span><span class="track"><i class="bar" style="--v:47.65%;background:var(--sky)"></i></span><span class="v"><span data-count="47.65" data-dec="2">0</span>%</span></div>
-            <p class="k-text" style="margin-top:6px">dos estabelecimentos: São Paulo é o lugar certo para provar o modelo</p>
+          <div class="row2">
+            <span class="n" data-count="1199142">0</span>
+            <p>estabelecimentos; <b style="color:#fff">47,65%</b> no Sudeste e 72% de pequeno porte, em que o vendedor do distribuidor é quem recomenda</p>
           </div>
+          <p class="src">ABIA e Wise Sales, 08/09/2026</p>
         </div>
       </div>
-      <p class="src">ABIA e Wise Sales, “Food service brasileiro ganha escala, amadurece operações e reforça papel estratégico para a indústria de alimentos”, 08/09/2026</p>
+      <p class="src">Briefing e transcrição da reunião Lactalis × 75LAB, 16/09/2026</p>
     </div>
   </div>
 </section>
 
-<!-- 06 · CONCORRÊNCIA -->
-<section class="slide" data-theme="dark" data-chapter="01 · O desafio" data-title="Mapa competitivo" data-orbit="10%,-40%,40deg,1.2,.25">
+<!-- 05 · CONCORRÊNCIA -->
+<section class="slide" data-theme="light" data-chapter="01 · O desafio" data-title="Mapa competitivo" data-orbit="0%,0%,0deg,1,0">
   <div class="wrap">
-    <p class="eyebrow" data-a="left">Concorrência</p>
-    <h2 class="tk">Quase todos falam de qualidade e sabor. <em>Ninguém ocupa “a escolha que faz a rota do distribuidor funcionar”.</em></h2>
-    <div class="matrix">
-      <div class="axes" data-a="fade"></div><div class="mid-x" data-a="fade"></div><div class="mid-y" data-a="fade"></div>
-      <span class="ax x1">Fala de produto</span><span class="ax x2">Fala de operação →</span>
-      <span class="ax y1">Pouca ativação da rota</span><span class="ax y2">Ativa a rota do distribuidor →</span>
-      <div class="free" data-a="scale" data-d="1.2s"><span>Espaço não ocupado</span></div>
-      <div class="bub" style="left:16%;top:80%" data-a="pop"><span class="b" style="--z:calc(var(--u)*3.4)"></span><span class="l">Maioria das indústrias<small>Qualidade e sabor; ficha sem aplicação</small></span></div>
-      <div class="bub" style="left:20%;top:22%" data-a="pop"><span class="b" style="--z:calc(var(--u)*3);--c:rgba(255,255,255,.12)"></span><span class="l">Distribuidores em geral<small>Competem em preço, produto e prazo</small></span></div>
-      <div class="bub" style="left:66%;top:74%" data-a="pop"><span class="b" style="--z:calc(var(--u)*2.8);--c:rgba(91,197,242,.35)"></span><span class="l">Nestlé Professional<small>Chefs, receitas e suporte a negócios</small></span></div>
-      <div class="bub" style="left:56%;top:57%" data-a="pop"><span class="b" style="--z:calc(var(--u)*2.8);--c:rgba(91,197,242,.35)"></span><span class="l">Unilever Food Solutions<small>Fichas de custo, cardápio, treinos curtos</small></span></div>
-      <div class="bub" style="left:12%;top:94%" data-a="pop"><span class="b" style="--z:calc(var(--u)*1.6);--c:transparent;border:1.5px dashed var(--sky)"></span><span class="l" style="color:var(--sky)">Lactalis hoje<small>Credencial forte, linguagem Food Service por criar</small></span></div>
-      <div class="bub target" style="left:80%;top:20%" data-a="pop" data-d="1.6s"><span class="b" style="--z:calc(var(--u)*3.2)"></span><span class="l">Lactalis na Operação<small>Aplicação + argumento de 30s + pedido simples</small></span></div>
-      <svg style="position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path class="draw" pathLength="1" d="M12,92 C30,80 55,40 78,22" fill="none" stroke="var(--lime)" stroke-width="1.4" vector-effect="non-scaling-stroke" style="--d:1.4s"/></svg>
+    <p class="eyebrow" data-a="left">Concorrência · leitura das fontes públicas</p>
+    <h2 class="tk">As referências da categoria apoiam o operador. <em>Equipar o vendedor do distribuidor é o espaço livre para a Lactalis.</em></h2>
+    <div class="cmap-wrap">
+      <div class="cmap" data-a="fade">
+        <span class="ax-y">Apoio ao vendedor do distribuidor →</span>
+        <div class="cm-plot">
+          <div class="q tl"><span>Rota sem aplicação</span></div>
+          <div class="q tr hl"><span>Operação + rota · espaço da proposta</span></div>
+          <div class="q bl"><span>Produto na prateleira</span></div>
+          <div class="q br"><span>Apoio direto ao operador</span></div>
+          <svg class="cm-arrow" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M14,84 C32,66 56,42 76,24" vector-effect="non-scaling-stroke"/></svg>
+          <div class="pt ref" style="left:16%;top:64%" tabindex="0" role="button" aria-expanded="false"><i class="dot"></i><span class="lb">Abordagem comum da categoria<i>ⓘ</i></span><span class="tip" role="tooltip"><b>Abordagem comum da categoria</b>Leitura 75 LAB no plano estratégico: a comunicação de lácteos para Food Service tende a se apoiar em qualidade e sabor, com pouca aplicação na operação. Não citamos marcas porque não é uma medição.<small>Fonte: plano estratégico 75 LAB, out. 2026</small></span></div>
+          <div class="pt now" style="left:10%;top:86%" tabindex="0" role="button" aria-expanded="false"><i class="dot"></i><span class="lb">Lactalis hoje<i>ⓘ</i></span><span class="tip" role="tooltip"><b>Lactalis hoje</b>Frente Food Service em estágio zero: sem linguagem própria, prova comercial ou ferramentas de rota.<small>Fonte: reunião Lactalis × 75 LAB, 16/09/2026</small></span></div>
+          <div class="pt" style="left:60%;top:60%" tabindex="0" role="button" aria-expanded="false"><i class="dot"></i><span class="lb">Nestlé Professional<i>ⓘ</i></span><span class="tip" role="tooltip"><b>Nestlé Professional</b>O site oficial cita equipe de chefs que ajuda a gerar negócios, receitas, treinamentos para a equipe do cliente, materiais de apoio de marca e consultoria de cardápio. Vende via distribuidores e brokers.<em>Ferramentas para o vendedor do distribuidor: não identificadas na página.</em><a href="https://www.nestleprofessional.com.br/" target="_blank" rel="noopener">nestleprofessional.com.br ↗</a><small>Consulta em 06/10/2026 · posição = leitura 75 LAB</small></span></div>
+          <div class="pt l" style="left:90%;top:80%" tabindex="0" role="button" aria-expanded="false"><i class="dot"></i><span class="lb">Unilever Food Solutions<i>ⓘ</i></span><span class="tip" role="tooltip"><b>Unilever Food Solutions</b>O site oficial cita consultoria de cardápio, receitas, fichas técnicas de custos, suporte na operação e treinamentos para equipes de cozinha (Academia UFS, vídeos curtos).<em>Ferramentas para o vendedor do distribuidor: não identificadas na página.</em><a href="https://www.unileverfoodsolutions.com.br/sobre-unilever-food-solutions.html" target="_blank" rel="noopener">unileverfoodsolutions.com.br/sobre ↗</a><small>Consulta em 06/10/2026 · posição = leitura 75 LAB</small></span></div>
+          <div class="pt l target down" style="left:82%;top:24%" tabindex="0" role="button" aria-expanded="false"><i class="dot"></i><span class="lb">Lactalis na Operação<i>ⓘ</i></span><span class="tip" role="tooltip"><b>Lactalis na Operação · proposta</b>Aplicação por ocasião de consumo, argumento de 30 segundos para o vendedor Bidfood e pedido simples pelo portal. É a posição que o piloto quer conquistar, não uma posição atual.<small>Fonte: proposta 75 LAB</small></span></div>
+        </div>
+        <div class="ax-x"><span>← Fala de produto (qualidade, sabor, ficha)</span><span>Apoia a operação do cliente (receitas, cardápio, custo, treino) →</span></div>
+      </div>
+      <aside class="cm-read" data-a="right" data-d=".3s">
+        <span class="mono">Como ler</span>
+        <p>Cada ponto é uma <b>leitura qualitativa da 75 LAB</b> sobre o que a empresa publica no próprio site. Não é medição de mercado. <b>Passe o mouse ou toque nos pontos</b> para ver a fonte.</p>
+        <span class="mono">O que as fontes mostram</span>
+        <p>Nestlé Professional e Unilever Food Solutions oferecem receitas, consultoria de cardápio e treinamento para a <b>equipe do cliente</b>. Nas páginas consultadas, não identificamos ferramentas para o <b>vendedor do distribuidor</b>.</p>
+      </aside>
     </div>
-    <p class="src" style="position:static">Leitura qualitativa 75LAB a partir de Nestlé Professional, Unilever Food Solutions e Bidfood (sites, 05/10/2026) e Food Connection (26/05/2026). Posições ilustrativas, não medidas.</p>
   </div>
 </section>
 
-<!-- 07 · INSIGHT -->
-<section class="slide" id="p2" data-t="mask" data-theme="dark" data-chapter="02 · A estratégia" data-title="O insight" data-orbit="-20%,-34%,-80deg,1.2,.4">
+
+<!-- 06 · INSIGHT + ESTRATÉGIA -->
+<section class="slide" id="p2" data-theme="light" data-chapter="02 · A estratégia" data-title="Insight e estratégia" data-orbit="0%,0%,0deg,1,0">
   <div class="wrap">
-    <p class="eyebrow" data-a="left">Insight</p>
+    <p class="eyebrow" data-a="left">Insight e estratégia</p>
     <h2 class="tk">Credencial abre a porta. <em>Consequência operacional fecha o pedido.</em></h2>
-    <div class="ins2">
-      <p class="big" data-a="blur">Em Food Service, o produto raramente é o protagonista. <span>A entrega do operador é.</span></p>
-      <div class="cards">
-        <div class="ins" data-a="right" style="--i:0"><i class="ic" data-ic="seller"></i><p class="q">O vendedor do distribuidor é mídia e consultor ao mesmo tempo.</p><p class="c">O kit precisa ser mais útil que bonito: conversa, objeção, chamada e pedido.</p></div>
-        <div class="ins" data-a="right" style="--i:1"><i class="ic" data-ic="target"></i><p class="q">Primeira compra sem plano de uso vira teste perdido.</p><p class="c">Experimentação guiada por ocasião e retorno de rota.</p></div>
-        <div class="ins" data-a="right" style="--i:2"><i class="ic" data-ic="doc"></i><p class="q">Catálogo é biblioteca. Lançamento exige trilha de decisão.</p><p class="c">Kits de categoria como motor; catálogo como suporte.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 08 · ESTRATÉGIA -->
-<section class="slide" data-theme="dark" data-chapter="02 · A estratégia" data-title="Cinco pilares em ciclo" data-orbit="-36%,30%,0deg,.7,.25">
-  <div class="wrap">
-    <p class="eyebrow" data-a="left">Estratégia</p>
-    <h2 class="tk">Uma plataforma de categoria em ciclo: <em>o que o piloto aprende vira o playbook da próxima.</em></h2>
+    <p class="ins-lead" data-a="up" data-d=".2s">Em Food Service o produto raramente é o protagonista: <strong>a entrega do operador é.</strong> Por isso propomos uma plataforma de categoria em cinco etapas, que se repete a cada lançamento.</p>
     <div class="body">
-      <div class="split" style="grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)">
-        <div class="morph">
-          <p class="from" data-a="fade">Materiais dispersos, venda de produto, ativação eventual</p>
-          <svg viewBox="0 0 40 40" aria-hidden="true"><path class="draw" pathLength="1" d="M20,4 V34 M12,26 L20,35 L28,26" style="--d:.5s"/></svg>
-          <p class="to" data-a="up" data-d=".7s">Uma <b>plataforma modular de categoria</b>: recomendação de rota, aplicação e aprendizado de sell-out.</p>
-          <p class="k-text" data-a="up" data-d="1s">Iogurte e manteiga blister primeiro. Depois manteiga bloco, leite condensado e outras, sem recomeçar do zero.</p>
-        </div>
-        <div class="loop">
-          <svg class="ring" viewBox="0 0 100 100" aria-hidden="true">
-            <circle class="draw" pathLength="1" cx="50" cy="50" r="40" fill="none" stroke="rgba(91,197,242,.45)" stroke-width=".5" style="--d:.2s"/>
-            <g class="runner" style="transform-origin:50px 50px"><circle cx="50" cy="10" r="1.4" fill="var(--lime)"/></g>
-          </svg>
-          <div class="center" data-a="fade" data-d="1s"><span class="num">90</span><p class="mono mut">dias de piloto</p></div>
-          <div class="pn" style="left:50%;top:10%" data-a="pop"><i class="ic" data-ic="target"></i><span class="n">1</span><b class="t">Selecionar</b><span class="d">Mix e segmentos pequenos para a prova ser clara.</span></div>
-          <div class="pn" style="left:88%;top:37.6%" data-a="pop"><i class="ic" data-ic="bulb"></i><span class="n">2</span><b class="t">Traduzir</b><span class="d">Atributo vira uso, rendimento e ocasião.</span></div>
-          <div class="pn" style="left:73.5%;top:82.4%" data-a="pop"><i class="ic" data-ic="box"></i><span class="n">3</span><b class="t">Equipar</b><span class="d">Conversa, materiais e gatilho de pedido.</span></div>
-          <div class="pn" style="left:26.5%;top:82.4%" data-a="pop"><i class="ic" data-ic="check"></i><span class="n">4</span><b class="t">Provar</b><span class="d">Experimentação controlada e retorno de rota.</span></div>
-          <div class="pn" style="left:12%;top:37.6%" data-a="pop"><i class="ic" data-ic="cycle"></i><span class="n">5</span><b class="t">Aprender e replicar</b><span class="d">O que funcionou vira playbook.</span></div>
-        </div>
+      <div class="cyc">
+        <div class="rail" aria-hidden="true"></div>
+        <div class="cy" data-a="up"><i class="ic" data-ic="target"></i><span class="n">1</span><b class="t">Selecionar</b><p class="d">Mix curto e um cluster: hotelaria, café da manhã.</p></div>
+        <div class="cy" data-a="up"><i class="ic" data-ic="bulb"></i><span class="n">2</span><b class="t">Traduzir</b><p class="d">Atributo vira uso, rendimento e ocasião, com claims aprovados.</p></div>
+        <div class="cy" data-a="up"><i class="ic" data-ic="seller"></i><span class="n">3</span><b class="t">Equipar</b><p class="d">O vendedor é mídia e consultor: conversa de 30 s, objeções e pedido.</p></div>
+        <div class="cy" data-a="up"><i class="ic" data-ic="check"></i><span class="n">4</span><b class="t">Provar</b><p class="d">Primeira compra com plano de uso e retorno de rota.</p></div>
+        <div class="cy" data-a="up"><i class="ic" data-ic="cycle"></i><span class="n">5</span><b class="t">Aprender e replicar</b><p class="d">Os dados do piloto viram o playbook da próxima categoria.</p></div>
+        <div class="ret" aria-hidden="true"><svg viewBox="0 0 100 40" preserveAspectRatio="none"><path d="M100,0 C100,26 97,34 90,34 L10,34 C3,34 0,26 0,2" vector-effect="non-scaling-stroke"/></svg><i class="head"></i><span>O playbook volta para a próxima categoria</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 09 · REVEAL -->
-<section class="slide reveal" id="p3" data-t="zoom" data-theme="dark" data-chapter="03 · A solução" data-title="Reveal — Lactalis na Operação" data-orbit="0%,0%,0deg,1.6,0">
+<!-- 07 · REVEAL -->
+<section class="slide reveal" id="p3" data-t="zoom" data-theme="dark" data-chapter="03 · A solução" data-title="Lactalis na Operação" data-orbit="0%,0%,0deg,1,0">
   <div class="light" aria-hidden="true"></div>
-  <div class="orb" aria-hidden="true">
-    <svg viewBox="0 0 240 100" preserveAspectRatio="xMidYMid meet">
-      <path class="draw" pathLength="1" d="M18,64 C2,30 60,6 140,6 C170,6 196,10 214,15" stroke-width="2.4" style="--d:.2s"/>
-      <path class="draw" pathLength="1" d="M222,30 C240,70 180,96 100,95 C80,95 62,93 50,90" stroke-width="2.4" style="--d:.6s"/>
-    </svg>
-  </div>
   <div class="wrap">
     <p class="pre" data-a="fade" data-d=".4s">A solução que propomos · Lactalis × Bidfood</p>
-    <h2 aria-label="Lactalis na Operação"><span class="js-chars" aria-hidden="true">Lactalis</span><span class="sub js-chars" aria-hidden="true">na Operação</span></h2>
+    <div class="rv-title">
+      <div class="orb" aria-hidden="true">
+        <svg viewBox="0 0 240 100" preserveAspectRatio="none">
+          <path class="draw" pathLength="1" d="M18,64 C2,30 60,6 140,6 C170,6 196,10 214,15" stroke-width="2.4" vector-effect="non-scaling-stroke" style="--d:.2s"/>
+          <path class="draw" pathLength="1" d="M222,30 C240,70 180,96 100,95 C80,95 62,93 50,90" stroke-width="2.4" vector-effect="non-scaling-stroke" style="--d:.6s"/>
+        </svg>
+      </div>
+      <h2 aria-label="Lactalis na Operação"><span class="js-chars" aria-hidden="true">Lactalis</span><span class="sub js-chars" aria-hidden="true">na Operação</span></h2>
+    </div>
     <p class="tagline" data-a="up" data-d="1.9s">Lácteos que ajudam a operação a entregar melhor, todos os dias, começando pela rota da <strong style="color:#fff;font-weight:650">Bidfood</strong> em São Paulo.</p>
     <div class="trio" data-a="up" data-d="2.3s">
       <div><i class="ic" data-ic="pin"></i>Onde usar</div>
@@ -1198,8 +1178,8 @@ body.mode-scroll .hdr .chap{display:none}
   </div>
 </section>
 
-<!-- 10 · KIT -->
-<section class="slide" data-theme="light" data-chapter="03 · A solução" data-title="O kit de categoria" data-orbit="0%,-46%,0deg,1.4,.15">
+<!-- 08 · KIT -->
+<section class="slide" data-theme="light" data-chapter="03 · A solução" data-title="O kit de categoria" data-orbit="0%,0%,0deg,1,0">
   <div class="wrap">
     <p class="eyebrow" data-a="left">O que vamos entregar · kit de categoria</p>
     <h2 class="tk">Um kit que o vendedor usa na visita, <em>não um catálogo que fica na gaveta.</em></h2>
@@ -1216,38 +1196,46 @@ body.mode-scroll .hdr .chap{display:none}
   </div>
 </section>
 
-<!-- 11 · CRONOGRAMA -->
-<section class="slide" id="p4" data-theme="light" data-chapter="04 · Execução" data-title="Cronograma do piloto" data-orbit="0%,46%,0deg,1.5,.15">
+<!-- 09 · CRONOGRAMA -->
+<section class="slide" id="p4" data-theme="light" data-chapter="04 · Execução" data-title="Cronograma do piloto" data-orbit="0%,0%,0deg,1,0">
   <div class="wrap">
-    <p class="eyebrow" data-a="left">Cronograma · cluster A: hotelaria, café da manhã</p>
-    <h2 class="tk">Treze semanas, um cluster, dois produtos: <em>foco para provar rápido e gastar pouco.</em></h2>
-    <div class="body">
-      <div class="gantt">
-        <div></div>
-        <div class="wk">S1</div><div class="wk">S2</div><div class="wk">S3</div><div class="wk">S4</div><div class="wk">S5</div><div class="wk">S6</div><div class="wk">S7</div><div class="wk">S8</div><div class="wk">S9</div><div class="wk">S10</div><div class="wk">S11</div><div class="wk">S12</div><div class="wk">S13</div>
-        <div class="ph" data-a="fade"><b>0 · Prontidão</b><span>Escolher o problema certo</span><span class="owner"><i>Lactalis</i><i>Bidfood</i><i>75LAB</i></span></div>
-        <div class="gb bar" style="grid-column:2/4;--i:0"><span>SKUs, segmentos, claims, baseline<small>workshop 90 min</small></span></div>
-        <div class="ph" data-a="fade"><b>1 · Preparar</b><span>Segurança ao distribuidor</span><span class="owner"><i>75LAB</i><i>Bidfood</i></span></div>
-        <div class="gb bar" style="grid-column:4/6;--i:1"><span>Pitch, cadastro, treino, kit vendedor<small>validar com 3–5 vendedores</small></span></div>
-        <div class="ph" data-a="fade"><b>2 · Sell-in</b><span>Recomendação e 1ª compra</span><span class="owner"><i>Bidfood</i><i>75LAB</i></span></div>
-        <div class="gb bar sky" style="grid-column:6/8;--i:2"><span>Rota de visitas, portal<small>contas-alvo</small></span></div>
-        <div class="ph" data-a="fade"><b>3 · Experimentar</b><span>Teste vira uso</span><span class="owner"><i>75LAB</i><i>parceiro</i></span></div>
-        <div class="gb bar sky" style="grid-column:8/11;--i:3"><span>Degustação, coffee break ou demo com chef<small>condicionado à infraestrutura</small></span></div>
-        <div class="ph" data-a="fade"><b>4 · Sustentar</b><span>Converter em repetição</span><span class="owner"><i>Bidfood</i><i>75LAB</i></span></div>
-        <div class="gb bar" style="grid-column:11/14;--i:4"><span>Retorno de rota, conteúdo, lembrete de recompra<small>leitura de dados</small></span></div>
-        <div class="ph" data-a="fade"><b>5 · Decidir</b><span>Escalar com evidência</span><span class="owner"><i>Lactalis</i><i>75LAB</i></span></div>
-        <div class="gb bar lime" style="grid-column:14/15;--i:5"><span>Relatório</span></div>
-        <span class="ms" style="left:calc(var(--u)*17 + (100% - var(--u)*17) * .5 / 13)" data-a="fade" data-d="1.6s"><span></span><em>Workshop + baseline</em></span>
-        <span class="ms" style="left:calc(var(--u)*17 + (100% - var(--u)*17) * 3.9 / 13)" data-a="fade" data-d="1.8s"><span></span><em>Go/no-go de impressão</em></span>
-        <span class="ms" style="left:calc(var(--u)*17 + (100% - var(--u)*17) * 12.5 / 13)" data-a="fade" data-d="2s"><span></span><em>Decisão de escala</em></span>
+    <p class="eyebrow" data-a="left">Cronograma do piloto · 13 semanas</p>
+    <h2 class="tk">Treze semanas e três gates de decisão: <em>o piloto só avança com aprovação a cada etapa.</em></h2>
+    <div class="wk" data-a="fade">
+      <div class="wk-phases" aria-hidden="true">
+        <span style="--c:1/3" class="p1">Prontidão</span>
+        <span style="--c:3/6" class="p2">Estratégia e criação</span>
+        <span style="--c:6/7" class="p3">Preparação</span>
+        <span style="--c:7/12" class="p4">Piloto em campo</span>
+        <span style="--c:12/14" class="p5">Leitura e decisão</span>
       </div>
-      <p class="src">Responsáveis propostos; prazos a ajustar ao lead time de impressão, cadastro e estoque.</p>
+      <div class="wk-line" role="tablist" aria-label="Semanas do piloto">
+        <button class="wk-n on" role="tab" aria-selected="true"><span class="no">S1</span><span class="fo">Kick-off e prontidão</span><span class="de">Workshop Lactalis + 75 LAB + Bidfood; definição de categoria, SKUs, cluster prioritário, metas, responsáveis e dados necessários.</span></button>
+        <button class="wk-n gate" role="tab" aria-selected="false"><span class="no">S2</span><span class="fo">Diagnóstico comercial</span><span class="de">Leitura de mix, estoque, preço, margem, cadeia fria, regras de cadastro, contas-alvo e calendário da Bidfood. <b>Gate 1:</b> validação do escopo do piloto.</span></button>
+        <button class="wk-n" role="tab" aria-selected="false"><span class="no">S3</span><span class="fo">Estratégia de entrada</span><span class="de">Definição da jornada, proposta de valor, narrativa <strong>Lactalis na Operação</strong>, mensagem por público e plano de GTM.</span></button>
+        <button class="wk-n" role="tab" aria-selected="false"><span class="no">S4</span><span class="fo">Conteúdo comercial</span><span class="de">Estrutura da apresentação Bidfood, argumentário de vendas, lâminas A5, ficha técnica/aplicação e roteiro de rota.</span></button>
+        <button class="wk-n" role="tab" aria-selected="false"><span class="no">S5</span><span class="fo">Criação e aprovações</span><span class="de">Desenvolvimento dos materiais físicos e digitais; assets para MyBidfood/WhatsApp; revisão de claims, dados técnicos e aprovações internas.</span></button>
+        <button class="wk-n gate" role="tab" aria-selected="false"><span class="no">S6</span><span class="fo">Preparação de campo</span><span class="de">Produção leve/impressão, organização dos kits, cadastro no portal e treinamento do time comercial Bidfood. <b>Gate 2:</b> materiais e operação aprovados para lançamento.</span></button>
+        <button class="wk-n" role="tab" aria-selected="false"><span class="no">S7</span><span class="fo">Lançamento interno</span><span class="de">Comunicação ao time de vendas, distribuição dos kits, lista de contas prioritárias e início da abordagem em rota.</span></button>
+        <button class="wk-n" role="tab" aria-selected="false"><span class="no">S8</span><span class="fo">Sell-in</span><span class="de">Visitas às contas-alvo, apresentação da categoria, primeira compra e registro de objeções/frequência de abordagem.</span></button>
+        <button class="wk-n" role="tab" aria-selected="false"><span class="no">S9</span><span class="fo">Experimentação</span><span class="de">Demonstração ou coffee break em poucas contas estratégicas, somente se houver infraestrutura e cadeia fria garantidas. Coleta de feedback de uso.</span></button>
+        <button class="wk-n" role="tab" aria-selected="false"><span class="no">S10</span><span class="fo">Ajuste comercial</span><span class="de">Revisão de objeções, ajustes no argumento, reforço de materiais e segunda onda de visitas.</span></button>
+        <button class="wk-n" role="tab" aria-selected="false"><span class="no">S11</span><span class="fo">Sustentação</span><span class="de">Conteúdo digital de aplicação, lembrete de recompra, acompanhamento de disponibilidade e retorno dos vendedores aos clientes que testaram.</span></button>
+        <button class="wk-n" role="tab" aria-selected="false"><span class="no">S12</span><span class="fo">Leitura de resultado</span><span class="de">Consolidação de sell-in, primeira compra, recompra, contas ativas, uso dos materiais, rupturas e principais barreiras.</span></button>
+        <button class="wk-n gate" role="tab" aria-selected="false"><span class="no">S13</span><span class="fo">Decisão de escala</span><span class="de">Relatório final do piloto, aprendizados, versão 2 do kit e recomendação de expansão para novo cluster ou categoria. <b>Gate 3:</b> aprovar, ajustar ou interromper a escala.</span></button>
+      </div>
+      <div class="wk-panel" aria-live="polite">
+        <div class="big"><small>Semana</small><span class="wk-p-no">1</span></div>
+        <div><h4 class="wk-p-fo">Kick-off e prontidão</h4><p class="wk-p-de">Workshop Lactalis + 75 LAB + Bidfood; definição de categoria, SKUs, cluster prioritário, metas, responsáveis e dados necessários.</p></div>
+      </div>
+      <p class="wk-legend"><span class="gate-key"></span>Gate de decisão <span class="sep">·</span><span class="hint2">Clique ou passe o mouse em uma semana para ver as entregas</span></p>
     </div>
   </div>
+
 </section>
 
-<!-- 12 · RASTREAMENTO -->
-<section class="slide" data-theme="dark" data-chapter="04 · Execução" data-title="Plano de Rastreamento 75LAB" data-orbit="-40%,36%,-10deg,.9,.25">
+<!-- 10 · RASTREAMENTO -->
+<section class="slide" data-theme="light" data-chapter="04 · Execução" data-title="Plano de Rastreamento 75LAB" data-orbit="0%,0%,0deg,1,0">
   <div class="wrap">
     <p class="eyebrow" data-a="left">Plano de Rastreamento 75LAB</p>
     <h2 class="tk">Cada real investido no piloto <em>vira dado para decidir a escala.</em></h2>
@@ -1265,7 +1253,7 @@ body.mode-scroll .hdr .chap{display:none}
         </div>
       </div>
       <div class="mode on" data-a="right" data-d=".2s">
-        <span class="mono" style="color:var(--lime)">Acompanhamento contínuo · 13 semanas</span>
+        <span class="mono" style="color:#1F7FC0">Acompanhamento contínuo · 13 semanas</span>
         <h3>On Timing</h3>
         <p class="def">A recomendação vira pedido? O pedido vira hábito?</p>
         <div class="items">
@@ -1282,62 +1270,41 @@ body.mode-scroll .hdr .chap{display:none}
   </div>
 </section>
 
-<!-- 13 · PROPOSTA (escopo) -->
-<section class="slide" id="p5" data-theme="light" data-chapter="05 · Proposta" data-title="Proposta comercial" data-orbit="-44%,-30%,20deg,.8,.2">
+<!-- 11 · PROPOSTA E INVESTIMENTO -->
+<section class="slide invest" id="p5" data-theme="light" data-chapter="05 · Investimento" data-title="Proposta e investimento" data-orbit="0%,0%,0deg,1,0">
   <div class="wrap">
-    <p class="eyebrow" data-a="left">Proposta 75LAB · escopo</p>
-    <h2 class="tk">Começar pelo piloto com escopo fechado. <em>A plataforma só vem depois da evidência.</em></h2>
-    <div class="lv">
-      <div class="card l1" data-a="left">
-        <div class="row" style="justify-content:space-between;align-items:baseline"><span class="num">01</span><span class="mono" style="color:var(--lime)">Escopo fechado · 13 semanas</span></div>
-        <h3>Piloto de Categoria Food Service</h3>
-        <ul><li>Iogurte + manteiga Président blister na Bidfood São Paulo</li><li>Estratégia, conteúdo e criação do kit completo</li><li>Produção leve e treino dos vendedores Bidfood</li><li>Coordenação de ativações em contas selecionadas</li><li>Plano de Rastreamento, dashboard e relatório de decisão</li></ul>
-      </div>
-      <div class="gate" data-a="fade" data-d=".6s"><svg viewBox="0 0 80 50" aria-hidden="true"><path class="draw" pathLength="1" d="M4,25 H70 M62,17 L72,25 L62,33" style="--d:.8s"/></svg><span>Gate<br>evidência</span></div>
-      <div class="card l2" data-a="right" data-d=".4s">
-        <div class="row" style="justify-content:space-between;align-items:baseline"><span class="num">02</span><span class="mono mut">Opcional · após o piloto</span></div>
-        <h3>Plataforma Food Service</h3>
-        <ul><li>Catálogo modular digital + impresso</li><li>Manteiga bloco, leite condensado e outras categorias</li><li>Governança de claims e calendário com distribuidores</li></ul>
-      </div>
-    </div>
-    <p class="k-text" data-a="up" data-d="1s"><b style="color:var(--fg)">Papel da 75 LAB:</b> parceira de estruturação do canal. Promotoria e operação de campo são orçadas com parceiro especializado, com responsabilidades separadas.</p>
-  </div>
-</section>
-
-<!-- 14 · INVESTIMENTO -->
-<section class="slide invest" data-theme="dark" data-chapter="05 · Proposta" data-title="Investimento" data-orbit="0%,0%,0deg,1,0">
-  <div class="wrap">
-    <p class="eyebrow" data-a="left">Investimento</p>
-    <h2 class="tk">Um investimento de escopo fechado, <em>com entregas e critérios de decisão definidos antes de começar.</em></h2>
+    <p class="eyebrow" data-a="left">Proposta e investimento</p>
+    <h2 class="tk">Começamos pelo piloto, com escopo e investimento fechados. <em>A plataforma só vem depois da evidência.</em></h2>
     <div class="inv-grid">
-      <div class="inv-total" data-a="left">
-        <span class="mono" style="color:var(--lime)">Nível 1 · Piloto de Categoria · 13 semanas</span>
-        <p class="inv-value">R$ <span class="tbd">[a preencher]</span></p>
-        <dl>
-          <dt>Pagamento</dt><dd class="tbd">[a preencher]</dd>
-          <dt>Validade</dt><dd class="tbd">[a preencher]</dd>
-          <dt>Nível 2</dt><dd>Orçado após o relatório do piloto</dd>
-        </dl>
-        <div class="gets">
-          <span class="mono mut">O que a Lactalis recebe</span>
-          <p>Canal indireto validado com evidência</p>
-          <p>Kit de categoria pronto e testado em rota</p>
-          <p>Playbook para a próxima categoria</p>
+      <div class="inv-side">
+        <div class="inv-total" data-a="left">
+          <span class="mono" style="color:var(--lime)">Nível 1 · escopo fechado · 13 semanas</span>
+          <h3>Piloto de Categoria Food Service</h3>
+          <p class="inv-value">R$ <span class="tbd">[a preencher]</span></p>
+          <dl>
+            <dt>Pagamento</dt><dd class="tbd">[a preencher]</dd>
+            <dt>Validade</dt><dd class="tbd">[a preencher]</dd>
+          </dl>
+        </div>
+        <div class="inv-n2" data-a="left" data-d=".2s">
+          <span class="mono mut">Nível 2 · opcional, após o piloto</span>
+          <b>Plataforma Food Service</b>
+          <p>Catálogo modular, novas categorias (manteiga bloco, leite condensado) e governança de claims. Orçado a partir do relatório do piloto.</p>
         </div>
       </div>
       <div class="inv-lines">
         <div class="inv-row head" data-a="fade"><span>Frente</span><span>O que está incluso</span><span>Valor</span></div>
-        <div class="inv-row" data-a="up" style="--i:1"><b><i class="ic" data-ic="target"></i>Estratégia e prontidão</b><span>Workshop de 90 min, diagnóstico, baseline e plano do piloto</span><em class="tbd">R$ [—]</em></div>
-        <div class="inv-row" data-a="up" style="--i:2"><b><i class="ic" data-ic="doc"></i>Conteúdo e criação</b><span>Apresentação para a Bidfood, lâmina A5, folder, cartão de rota, fichas técnicas e conteúdo por ocasião</span><em class="tbd">R$ [—]</em></div>
-        <div class="inv-row" data-a="up" style="--i:3"><b><i class="ic" data-ic="box"></i>Produção leve</b><span>Tiragem inicial de lâminas, folders e cartões de rota</span><em class="tbd">R$ [—]</em></div>
-        <div class="inv-row" data-a="up" style="--i:4"><b><i class="ic" data-ic="play"></i>Treinamento</b><span>Kit de treinamento de vendas de 20 min para vendedores Bidfood</span><em class="tbd">R$ [—]</em></div>
-        <div class="inv-row" data-a="up" style="--i:5"><b><i class="ic" data-ic="coffee"></i>Ativações</b><span>Coordenação de degustação ou demo em contas selecionadas</span><em class="tbd">R$ [—]</em></div>
-        <div class="inv-row" data-a="up" style="--i:6"><b><i class="ic" data-ic="data"></i>Rastreamento e decisão</b><span>QR rastreável, dashboard e relatório de escala</span><em class="tbd">R$ [—]</em></div>
+        <div class="inv-row" data-a="up" style="--i:1"><b><i class="ic" data-ic="target"></i>Estratégia e prontidão</b><span>Workshop, diagnóstico comercial, baseline e plano do piloto</span><em>R$ [—]</em></div>
+        <div class="inv-row" data-a="up" style="--i:2"><b><i class="ic" data-ic="doc"></i>Conteúdo e criação</b><span>Apresentação Bidfood, lâmina A5, folder, cartão de rota, fichas técnicas e conteúdo por ocasião</span><em>R$ [—]</em></div>
+        <div class="inv-row" data-a="up" style="--i:3"><b><i class="ic" data-ic="box"></i>Produção leve</b><span>Tiragem inicial de lâminas, folders e cartões de rota</span><em>R$ [—]</em></div>
+        <div class="inv-row" data-a="up" style="--i:4"><b><i class="ic" data-ic="play"></i>Treinamento</b><span>Kit de treinamento de vendas de 20 min para o time Bidfood</span><em>R$ [—]</em></div>
+        <div class="inv-row" data-a="up" style="--i:5"><b><i class="ic" data-ic="coffee"></i>Ativações</b><span>Coordenação de demonstração em poucas contas estratégicas</span><em>R$ [—]</em></div>
+        <div class="inv-row" data-a="up" style="--i:6"><b><i class="ic" data-ic="data"></i>Rastreamento e decisão</b><span>QR rastreável, dashboard e relatório de escala</span><em>R$ [—]</em></div>
         <p class="inv-out" data-a="fade" data-d="1.2s"><b>Fora do escopo:</b> promotoria e equipe de campo (parceiro especializado), mídia paga e produto para degustação.</p>
       </div>
     </div>
     <div class="deal" data-a="up" data-d="1.3s">
-      <div class="cta-box"><span class="num">90′</span><p><small>Próximo passo</small>Workshop de prontidão Lactalis + Bidfood</p></div>
+      <div class="cta-box"><span class="num">90′</span><p><small>Próximo passo</small>Workshop de prontidão Lactalis + 75 LAB + Bidfood</p></div>
       <ol>
         <li><b>1</b>Fechar categoria, SKUs, cluster, metas e regras comerciais.</li>
         <li><b>2</b>Receber fichas técnicas, tabela, guia de marca e claims aprovados.</li>
@@ -1347,8 +1314,8 @@ body.mode-scroll .hdr .chap{display:none}
   </div>
 </section>
 
-<!-- 15 · ENCERRAMENTO + CONTATO -->
-<section class="slide closing" data-theme="dark" data-t="zoom" data-chapter="05 · Proposta" data-title="Encerramento e contato" data-orbit="22%,-8%,-10deg,1.25,.55">
+<!-- 12 · ENCERRAMENTO + CONTATO -->
+<section class="slide closing" data-theme="dark" data-t="zoom" data-chapter="Encerramento" data-title="Encerramento e contato" data-orbit="0%,0%,0deg,1,0">
   <div class="wrap">
     <div class="end">
       <div class="stack" style="gap:calc(var(--u)*1.2)">
@@ -1479,6 +1446,123 @@ body.mode-scroll .hdr .chap{display:none}
 .ph-note .mono{color:var(--sky)}
 .ph-note p{font-size:max(12px,calc(var(--u)*.92));line-height:1.4;color:#DCEAF6}
 @media (max-width:820px){.kitph{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none}.ph-area{min-height:70px}.ph-note{grid-column:1/-1}}
+
+/* ===== Revisão 2 (06/10) ===== */
+/* capa v2: tipografia larga, assinatura e horizonte */
+.slide.cover .wrap{justify-content:space-between;gap:calc(var(--u)*2)}
+.cv-sun{position:absolute;right:-12vw;bottom:-46vh;width:min(80vw,140vh);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(91,197,242,.30),rgba(91,197,242,.10) 38%,rgba(4,24,46,0) 66%);pointer-events:none}
+.cv-title{margin:0;font-family:var(--f-head);font-weight:800;text-transform:uppercase;font-size:calc(var(--u)*7.2);line-height:.92;letter-spacing:-.015em;font-variation-settings:"wdth" 125;display:flex;flex-direction:column;gap:.04em}
+.cv-title em{font-style:normal;color:var(--sky)}
+.cv-sub{font-size:var(--t-lead);line-height:1.4;color:#C9DDF0;max-width:50ch;margin-top:calc(var(--u)*2.4)}
+.cv-sub b{color:#fff;font-weight:600}
+.cv-foot{position:relative;display:flex;justify-content:space-between;align-items:flex-end;gap:calc(var(--u)*2) calc(var(--u)*4);flex-wrap:wrap;padding-top:calc(var(--u)*1.8)}
+.cv-foot::before{content:"";position:absolute;left:0;right:-6vw;top:0;height:1px;background:linear-gradient(90deg,rgba(255,255,255,.2),rgba(91,197,242,.75) 72%,rgba(91,197,242,0))}
+.cv-lock{display:flex;align-items:center;gap:calc(var(--u)*1.6)}
+.cv-lock .lac{height:calc(var(--u)*4.4);min-height:34px;width:auto;filter:brightness(0) invert(1)}
+.cv-lock .lab{height:calc(var(--u)*3);min-height:24px;width:auto}
+.cv-lock span{font-family:var(--f-mono);color:#9DB6CE;font-size:var(--t-body)}
+.slide.cover .meta{margin:0;padding:0;border:0;max-width:none;gap:calc(var(--u)*1.2) calc(var(--u)*3.2)}
+@media (max-width:820px){.cv-title{font-size:38px}.cv-sun{width:150vw;right:-60vw;bottom:-30vh}.cv-foot{flex-direction:column;align-items:flex-start}.slide.cover .wrap{gap:28px}}
+
+/* reveal v2: o arco contorna só o título */
+.reveal .rv-title{position:relative;display:inline-block;padding:calc(var(--u)*2.8) calc(var(--u)*6.4);margin-top:calc(var(--u)*.8)}
+.reveal .rv-title .orb{position:absolute;inset:0;left:0;top:0;width:100%;height:100%;transform:none;aspect-ratio:auto}
+.reveal .rv-title h2{margin:0;font-size:calc(var(--u)*6.2);font-variation-settings:"wdth" 116}
+.reveal .tagline{margin-top:calc(var(--u)*2.8)}
+@media (max-width:820px){.reveal .rv-title{padding:22px 16px}.reveal .rv-title h2{font-size:32px}}
+
+/* mapa competitivo com fontes */
+.cmap-wrap{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,.8fr);gap:calc(var(--u)*3);flex:1;min-height:0;align-items:stretch}
+.cmap{display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto;gap:10px;min-height:0}
+.cmap .ax-y{grid-row:1;grid-column:1;writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--f-mono);font-size:var(--t-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--navy);text-align:center}
+.cmap .ax-x{grid-row:2;grid-column:2;font-family:var(--f-mono);font-size:var(--t-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--navy);display:flex;justify-content:space-between;gap:12px}
+.cmap .ax-x span:last-child{text-align:right}
+.cm-plot{grid-row:1;grid-column:2;position:relative;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;border-left:1.5px solid var(--navy);border-bottom:1.5px solid var(--navy);min-height:calc(var(--u)*24)}
+.q{border:1px dashed rgba(0,75,133,.16);display:flex;padding:calc(var(--u)*.8)}
+.q span{font-family:var(--f-mono);font-size:max(9.5px,calc(var(--u)*.68));letter-spacing:.1em;text-transform:uppercase;color:var(--mut);max-width:22ch;line-height:1.35}
+.q.tl{align-items:flex-start}.q.tr{justify-content:flex-end;align-items:flex-start;text-align:right}.q.bl{align-items:flex-end}.q.br{justify-content:flex-end;align-items:flex-end;text-align:right}
+.q.hl{background:radial-gradient(circle at 70% 40%,rgba(91,197,242,.22),rgba(91,197,242,0) 72%);border:1.5px dashed #1F7FC0}
+.q.hl span{color:#1F7FC0;font-weight:700}
+.cm-arrow{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.cm-arrow path{fill:none;stroke:#1F7FC0;stroke-width:1.5;stroke-dasharray:4 6}
+.pt{--dot:max(14px,calc(var(--u)*1.6));position:absolute;transform:translate(calc(var(--dot)/-2),-50%);display:flex;align-items:center;gap:8px;cursor:help;z-index:2;outline:none}
+.pt.l{flex-direction:row-reverse;transform:translate(calc(-100% + var(--dot)/2),-50%)}
+.pt .dot{width:var(--dot);height:var(--dot);border-radius:50%;background:var(--navy);box-shadow:0 0 0 4px rgba(0,75,133,.12);flex:none}
+.pt.ref .dot{background:#fff;border:2px dashed var(--mut);box-shadow:none}
+.pt.now .dot{background:#fff;border:2px solid #1F7FC0;box-shadow:none}
+.pt.target .dot{background:var(--sky);animation:tgt 2.2s infinite}
+.pt .lb{font-size:max(12px,calc(var(--u)*.9));font-weight:650;line-height:1.15;white-space:nowrap;background:rgba(242,246,249,.94);padding:3px 7px;border-radius:5px}
+.pt .lb i{font-style:normal;color:#1F7FC0;font-weight:700;margin-left:5px}
+.pt.target .lb{color:#1F7FC0}
+.pt:focus-visible .lb{outline:2px solid #1F7FC0;outline-offset:2px}
+.tip{position:absolute;bottom:calc(100% + 12px);left:0;width:min(320px,calc(var(--u)*24));min-width:240px;background:var(--ink);color:#DCE8F2;border-radius:10px;padding:12px 14px;font-size:max(12px,calc(var(--u)*.84));line-height:1.45;font-weight:400;white-space:normal;text-align:left;box-shadow:0 18px 40px -16px rgba(0,20,40,.55);opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .22s,transform .22s,visibility 0s .22s;z-index:6;cursor:auto}
+.tip::before{content:"";position:absolute;left:0;right:0;bottom:-14px;height:14px}
+.tip b{display:block;color:#fff;font-size:1.05em;margin-bottom:4px}
+.tip em{display:block;font-style:normal;color:var(--lime);margin-top:6px}
+.tip a{display:inline-block;margin-top:8px;color:var(--sky);text-decoration:underline;text-underline-offset:3px;word-break:break-all}
+.tip small{display:block;font-family:var(--f-mono);font-size:10px;letter-spacing:.06em;color:#9DB6CE;margin-top:6px}
+.pt:hover .tip,.pt:focus-within .tip,.pt.open .tip{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.pt:hover,.pt:focus-within,.pt.open{z-index:7}
+.pt.l .tip{left:auto;right:0}
+.pt.down .tip{bottom:auto;top:calc(100% + 12px)}
+.pt.down .tip::before{bottom:auto;top:-14px}
+.cm-read{display:flex;flex-direction:column;gap:calc(var(--u)*.7);padding:calc(var(--u)*1.7);border-radius:calc(var(--u)*1.1);background:#fff;box-shadow:0 14px 40px -26px rgba(0,40,80,.4);align-self:center}
+.cm-read .mono{color:#1F7FC0}
+.cm-read .mono+p{margin-bottom:calc(var(--u)*.6)}
+.cm-read p{font-size:var(--t-small);color:var(--mut);line-height:1.45}
+.cm-read b{color:var(--fg);font-weight:600}
+@media (max-width:820px){
+  .cmap-wrap{grid-template-columns:minmax(0,1fr)}
+  .cm-plot{min-height:360px}
+  .pt .lb{font-size:11px;white-space:normal;max-width:120px}
+  .tip{position:fixed;left:16px;right:16px;bottom:calc(env(safe-area-inset-bottom,0px) + 76px);top:auto!important;width:auto;min-width:0;z-index:60}
+  .tip::before{display:none}
+  .cmap .ax-x{flex-direction:column;gap:4px}
+}
+
+/* cronograma de 13 semanas */
+.wk{display:flex;flex-direction:column;gap:calc(var(--u)*1.3);flex:1;min-height:0;justify-content:center}
+.wk-phases,.wk-line{display:grid;grid-template-columns:repeat(13,minmax(0,1fr));column-gap:4px}
+.wk-phases span{grid-column:var(--c);font-family:var(--f-mono);font-size:max(9.5px,calc(var(--u)*.68));letter-spacing:.1em;text-transform:uppercase;padding:6px 8px;border-radius:6px;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center}
+.wk-phases .p1{background:var(--navy)}.wk-phases .p2{background:#1F7FC0}.wk-phases .p3{background:#2A9FD6}.wk-phases .p4{background:var(--sky);color:var(--ink)}.wk-phases .p5{background:var(--ink)}
+.wk-line{position:relative;padding-top:14px}
+.wk-line::before{content:"";position:absolute;left:calc(100%/26);right:calc(100%/26);top:calc(14px + max(30px,var(--u)*3.2)/2);height:2px;background:linear-gradient(90deg,var(--navy),var(--sky))}
+.wk-n{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;padding:0 0 4px;position:relative;cursor:pointer;min-width:0;border-radius:8px}
+.wk-n .no{width:max(30px,calc(var(--u)*3.2));height:max(30px,calc(var(--u)*3.2));border-radius:50%;display:grid;place-items:center;background:#fff;border:1.5px solid var(--navy);font-family:var(--f-display);font-weight:800;font-size:max(12px,calc(var(--u)*1.05));color:var(--navy);position:relative;z-index:1;transition:transform .25s var(--ease),background .25s,color .25s}
+.wk-n .fo{font-size:max(10.5px,calc(var(--u)*.78));line-height:1.2;color:var(--mut);font-weight:600;max-width:100%;overflow-wrap:anywhere;hyphens:auto}
+.wk-n .de{display:none}
+.wk-n:hover .no{border-color:#1F7FC0;transform:scale(1.08)}
+.wk-n.on .no{background:var(--navy);color:#fff;transform:scale(1.14)}
+.wk-n.on .fo{color:var(--fg)}
+.wk-n.gate .no::after{content:"";position:absolute;top:-13px;left:50%;width:10px;height:10px;background:var(--coral);transform:translateX(-50%) rotate(45deg)}
+.wk-panel{display:grid;grid-template-columns:auto minmax(0,1fr);gap:calc(var(--u)*2.2);align-items:center;padding:calc(var(--u)*1.5) calc(var(--u)*2);border-radius:calc(var(--u)*1.1);background:#fff;box-shadow:0 14px 40px -26px rgba(0,40,80,.4);min-height:calc(var(--u)*8.6)}
+.wk-panel .big{font-family:var(--f-display);font-weight:800;font-size:calc(var(--u)*4.6);line-height:.85;color:#1F7FC0;min-width:2.2ch;text-align:center}
+.wk-panel .big small{display:block;font-family:var(--f-mono);font-size:var(--t-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mut);font-weight:400;margin-bottom:6px}
+.wk-panel h4{margin:0 0 6px;font-size:calc(var(--t-body)*1.15);font-weight:700;font-variation-settings:"wdth" 106}
+.wk-panel p{font-size:var(--t-small);line-height:1.5;color:var(--mut);max-width:90ch}
+.wk-panel p b,.wk-n .de b{color:#C8402B}
+.wk-panel p strong,.wk-n .de strong{color:var(--fg)}
+.wk-legend{font-family:var(--f-mono);font-size:var(--t-mono);letter-spacing:.06em;color:var(--mut);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.wk-legend .gate-key{width:9px;height:9px;background:var(--coral);transform:rotate(45deg);display:inline-block}
+@media (max-width:820px){
+  .wk-phases,.wk-panel,.wk-legend .sep,.wk-legend .sep+*{display:none}
+  .wk-line{grid-template-columns:minmax(0,1fr);row-gap:0;padding-top:0}
+  .wk-line::before{left:15px;right:auto;width:2px;top:8px;bottom:8px;height:auto}
+  .wk-n{display:grid;grid-template-columns:30px minmax(0,1fr);column-gap:14px;row-gap:2px;text-align:left;align-items:start;padding:8px 0;cursor:default}
+  .wk-n .no{grid-row:1/3;width:30px;height:30px;font-size:12px}
+  .wk-n.on .no{transform:none;background:#fff;color:var(--navy)}
+  .wk-n .fo{font-size:15px;color:var(--fg)}
+  .wk-n .de{display:block;font-size:13.5px;line-height:1.45;color:var(--mut)}
+  .wk-n.gate .no::after{top:auto;bottom:-6px;left:auto;right:-6px;transform:rotate(45deg)}
+}
+
+/* tema claro: rastreamento e cadeia */
+.slide[data-theme="light"] .trk .mode{border-color:var(--line);background:#fff}
+.slide[data-theme="light"] .trk .mode.on{border-color:rgba(31,127,192,.45);background:linear-gradient(160deg,rgba(91,197,242,.14),#fff 62%)}
+.slide[data-theme="light"] .trk .mode.on h3{color:#1F7FC0}
+.slide[data-theme="light"] .chain span{border-color:rgba(0,75,133,.3);color:var(--navy)}
+.slide[data-theme="light"] .chain span:last-child{background:var(--navy);color:#fff;border-color:var(--navy)}
+.slide[data-theme="light"] .chain i{color:#1F7FC0}
 .loop,.eco{width:min(100%,calc(var(--u)*21))!important}
 .loop .pn .d{font-size:max(11px,calc(var(--u)*.8))}
 .mkt .ringbox svg{width:calc(var(--u)*9);height:calc(var(--u)*9)}
@@ -1730,7 +1814,7 @@ addEventListener('touchend',function(e){
 addEventListener('touchstart',function(e){if(lbOpen){tx=e.touches[0].clientX;}},{passive:true});
 $('deck').addEventListener('click',function(e){
   if(scrollMode) return;
-  if(e.target.closest('a,button,[data-zoom],input,label,.copy')) return;
+  if(e.target.closest('a,button,[data-zoom],input,label,.copy,.pt')) return;
   var sel=getSelection&&getSelection().toString(); if(sel) return;
   lastPt={x:e.clientX/innerWidth,y:e.clientY/innerHeight};
   if(e.clientX<innerWidth*.18) go(cur-1); else go(cur+1);
@@ -1774,6 +1858,37 @@ $('lbClose').addEventListener('click',closeLb);
 $('lbPrev').addEventListener('click',function(e){e.stopPropagation();stepLb(-1);});
 $('lbNext').addEventListener('click',function(e){e.stopPropagation();stepLb(1);});
 $('lb').addEventListener('click',function(e){if(e.target===$('lb')||e.target===$('lbStage'))closeLb();});
+
+/* ---------- cronograma: semana selecionada (clique, foco ou hover) ---------- */
+doc.querySelectorAll('.wk').forEach(function(w){
+  var nodes=Array.prototype.slice.call(w.querySelectorAll('.wk-n'));
+  var pNo=w.querySelector('.wk-p-no'),pFo=w.querySelector('.wk-p-fo'),pDe=w.querySelector('.wk-p-de');
+  function sel(n){
+    nodes.forEach(function(x){var on=x===n;x.classList.toggle('on',on);x.setAttribute('aria-selected',on?'true':'false');});
+    if(pNo){pNo.textContent=n.querySelector('.no').textContent.replace('S','');pFo.textContent=n.querySelector('.fo').textContent;pDe.innerHTML=n.querySelector('.de').innerHTML;}
+  }
+  nodes.forEach(function(n){
+    n.addEventListener('click',function(e){e.stopPropagation();sel(n);});
+    n.addEventListener('focus',function(){sel(n);});
+    if(fine) n.addEventListener('mouseenter',function(){sel(n);});
+  });
+});
+
+/* ---------- balões de fonte (mapa competitivo): hover, foco ou toque ---------- */
+doc.querySelectorAll('.pt').forEach(function(p){
+  p.addEventListener('click',function(e){
+    if(e.target.closest('a')) return;
+    e.stopPropagation();
+    var was=p.classList.contains('open');
+    doc.querySelectorAll('.pt.open').forEach(function(x){x.classList.remove('open');x.setAttribute('aria-expanded','false');});
+    if(!was){p.classList.add('open');p.setAttribute('aria-expanded','true');}
+  });
+  p.addEventListener('keydown',function(e){
+    if(e.key==='Enter'||e.key===' '){e.preventDefault();e.stopPropagation();p.click();}
+    else if(e.key==='Escape'&&p.classList.contains('open')){e.stopPropagation();p.click();}
+  });
+});
+doc.addEventListener('click',function(e){ if(!e.target.closest('.pt')) doc.querySelectorAll('.pt.open').forEach(function(x){x.classList.remove('open');x.setAttribute('aria-expanded','false');}); });
 
 /* ---------- copy ---------- */
 doc.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(e){

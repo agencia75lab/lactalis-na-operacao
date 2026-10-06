@@ -26,6 +26,14 @@ $ptitle  = ([regex]::Match($pslides, '<!--\s*title:\s*(.+?)\s*-->')).Groups[1].V
 $phead   = $head -replace '<title>[^<]*</title>', ('<title>' + $ptitle + '</title>')
 $pitch   = $chrome + "`n" + $pslides + "`n" + $script
 
+# trechos compartilhados (src/partials): mapa competitivo e cronograma de 13 semanas
+$cmap  = Read-U8 (Join-Path $src 'partials\cmap.html')
+$weeks = Read-U8 (Join-Path $src 'partials\weeks.html')
+$dot   = [string][char]0x00B7   # ponto médio; evita depender da codificação deste .ps1
+$pitch = $pitch.Replace('@@CMAP@@', $cmap.Replace('@@CHAPTER@@', "01 $dot O desafio")).Replace('@@WEEKS@@', $weeks)
+$full  = $full.Replace('@@CMAP@@', $cmap.Replace('@@CHAPTER@@', "02 $dot Mercado & canal")).Replace('@@WEEKS@@', $weeks)
+foreach ($chk in @($pitch, $full)) { if ($chk.Contains('@@')) { throw 'marcador @@ sem substituição no build' } }
+
 Write-U8 (Join-Path $root 'index.html') (New-Doc $phead $pitch)
 Write-U8 (Join-Path $root 'completa\index.html') ((New-Doc $head $full) -replace '(src|href)="assets/', '$1="../assets/')
 Write-U8 (Join-Path $root 'artifact\proposta.html') ($phead + "`n" + $pitch)
