@@ -198,6 +198,18 @@
   .wk-n.gate .no::after{top:auto;bottom:-6px;left:auto;right:-6px;transform:rotate(45deg)}
 }
 
+/* QA revisão 2: espaço entre linhas de títulos grandes (acentos de OPERAÇÃO) e sobreposições */
+.cv-title{line-height:1.04;gap:0}
+.reveal .rv-title h2{line-height:1.04}
+.wk-panel .big{line-height:1}
+.wk-panel .big small{margin-bottom:8px}
+.end .fin,.closing .fin{line-height:1.14}
+.cm-plot{min-height:calc(var(--u)*17)}
+@media (max-width:820px){
+  .route .stop,.route .stop.up{transform:none!important;flex-direction:row;flex-wrap:wrap;align-items:baseline}
+  .route .stop .q{flex-basis:100%}
+}
+
 /* tema claro: rastreamento e cadeia */
 .slide[data-theme="light"] .trk .mode{border-color:var(--line);background:#fff}
 .slide[data-theme="light"] .trk .mode.on{border-color:rgba(31,127,192,.45);background:linear-gradient(160deg,rgba(91,197,242,.14),#fff 62%)}
