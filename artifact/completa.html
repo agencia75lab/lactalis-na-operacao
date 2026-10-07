@@ -2091,6 +2091,38 @@ body.mode-scroll .hdr .chap{display:none}
   #lab .lab-top .creds .num{font-size:28px}
   #lab .pgal.strip{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+/* slide 2 v4: limpo · logo + título, linha do método, portfólio recortado */
+#lab .wrap{justify-content:space-between;gap:calc(var(--u)*2.4)}
+#lab .l2-top{display:grid;grid-template-columns:auto minmax(0,1fr);gap:calc(var(--u)*4.4);align-items:center}
+#lab .l2-logo{height:calc(var(--u)*10.5);min-height:64px;width:auto}
+#lab .l2-claim .tk{font-size:calc(var(--t-h)*1.05);max-width:22ch;line-height:1.08}
+#lab .l2-stats{display:flex;flex-wrap:wrap;gap:calc(var(--u)*1) calc(var(--u)*3.2);margin-top:calc(var(--u)*2)}
+#lab .l2-stats>span{display:flex;align-items:baseline;gap:9px;font-size:var(--t-small);color:var(--mut)}
+#lab .l2-stats b{font-family:var(--f-display);font-weight:800;font-size:calc(var(--u)*2.6);line-height:1;color:var(--lime)}
+#lab .m2-h{font-family:var(--f-mono);font-size:var(--t-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--sky);margin-bottom:calc(var(--u)*1.6)}
+#lab .m2-line{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));position:relative}
+#lab .m2-line::before{content:"";position:absolute;left:0;right:0;top:6px;height:1px;background:linear-gradient(90deg,var(--lime),rgba(91,197,242,.55))}
+#lab .m2-line li{position:relative;padding:calc(var(--u)*2.1) calc(var(--u)*1.4) 0 0;display:flex;flex-direction:column;gap:5px}
+#lab .m2-line li::before{content:"";position:absolute;left:0;top:0;width:13px;height:13px;border-radius:50%;background:var(--ink);border:2px solid var(--lime);box-sizing:border-box}
+#lab .m2-line .n{font-family:var(--f-display);font-weight:800;font-size:calc(var(--u)*1.7);line-height:1;color:var(--lime)}
+#lab .m2-line b{font-size:var(--t-body);font-weight:650;line-height:1.2}
+#lab .l2-gal{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:calc(var(--u)*1)}
+#lab .l2-gal button{position:relative;padding:0;border-radius:8px;overflow:hidden;aspect-ratio:4/3;background:#0B2238}
+#lab .l2-gal img{width:100%;height:100%;object-fit:cover;transform:scale(1.34);transform-origin:50% 60%;transition:transform .8s var(--ease)}
+#lab .l2-gal button:hover img{transform:scale(1.42)}
+#lab .l2-gal button span{position:absolute;left:8px;bottom:8px;font-family:var(--f-mono);font-size:max(9.5px,calc(var(--u)*.66));letter-spacing:.12em;text-transform:uppercase;background:rgba(4,24,46,.88);color:#fff;padding:3px 8px;border-radius:99px;opacity:0;transition:opacity .25s}
+#lab .l2-gal button:hover span,#lab .l2-gal button:focus-visible span{opacity:1}
+#lab .src{opacity:.6}
+@media (max-width:820px){
+  #lab .l2-top{grid-template-columns:minmax(0,1fr);gap:18px}
+  #lab .l2-logo{height:64px}
+  #lab .l2-stats b{font-size:26px}
+  #lab .m2-line{grid-template-columns:minmax(0,1fr);gap:14px}
+  #lab .m2-line::before{left:6px;right:auto;top:6px;bottom:6px;width:1px;height:auto;background:linear-gradient(180deg,var(--lime),rgba(91,197,242,.55))}
+  #lab .m2-line li{padding:0 0 0 28px;flex-direction:row;align-items:baseline;gap:10px}
+  #lab .l2-gal{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #lab .l2-gal button span{opacity:1}
+}
 /* kit com 8 itens: lista densa e nota com respiro */
 .wrap:has(.kit2) .tk{font-size:calc(var(--t-h)*.86);max-width:34ch}
 .wrap:has(.kit2){gap:calc(var(--u)*1.5)}
