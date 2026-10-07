@@ -38,7 +38,7 @@ powershell -ExecutionPolicy Bypass -File .\build.ps1
 ## Pendências de conteúdo
 
 - Dados institucionais da 75 LAB (razão social, CNPJ, endereço, telefone) e do apresentador: marcados `[preencher]`.
-- Investimento do Nível 1 na tela de proposta: `[a preencher]`.
+- Investimento do Nível 1: R$ 59.900 (piloto 90 dias). Pendentes: condições de pagamento e validade da proposta.
 - Mockups do kit são conceitos ilustrativos; SKUs, claims, fotos e fichas técnicas dependem do time Lactalis.
 - Regras de mídia e compartilhamento de dados do MyBidfood a confirmar com a Bidfood.
 
