@@ -1299,7 +1299,7 @@ body.mode-scroll .hdr .chap{display:none}
     <p class="eyebrow" data-a="left">Territórios conceituais</p>
     <h2 class="tk">Recomendamos o território que <em>escala entre marcas e cabe numa conversa de rota.</em></h2>
     <div class="terr">
-      <div class="t rec" data-a="up" style="--i:0"><span class="tag badge">Recomendado</span><span class="mono" style="color:var(--sky)">Território 1</span><p class="name">Lactalis na Operação</p><p class="idea">“Lácteos que ajudam a operação a entregar melhor, todos os dias.”</p><p class="k-text">Conecta produto, aplicação, eficiência e serviço; escala entre marcas e categorias.</p>
+      <div class="t rec" data-a="up" style="--i:0"><span class="tag badge">Recomendado</span><span class="mono" style="color:var(--sky)">Território 1</span><p class="name">Lactalis na Operação</p><p class="idea">“A Lactalis presente na rotina da operação: aplicação clara, venda simples e recompra.”</p><p class="k-text">Conecta produto, aplicação, eficiência e serviço; escala entre marcas e categorias.</p>
         <div class="meter"><div>Funcional<b><i class="bar" style="--v:92%"></i></b></div><div>Escala<b><i class="bar" style="--v:90%"></i></b></div><div>Rota<b><i class="bar" style="--v:86%"></i></b></div></div></div>
       <div class="t" data-a="up" style="--i:1"><span class="mono mut">Território 2</span><p class="name">Qualidade que Serve</p><p class="idea">“A qualidade percebida começa na escolha que a cozinha faz.”</p><p class="k-text">Institucional e premium; forte para Président e hotelaria, menos funcional no treino de rota.</p>
         <div class="meter"><div>Funcional<b><i class="bar" style="--v:45%"></i></b></div><div>Escala<b><i class="bar" style="--v:60%"></i></b></div><div>Rota<b><i class="bar" style="--v:35%"></i></b></div></div></div>
@@ -1351,11 +1351,11 @@ body.mode-scroll .hdr .chap{display:none}
   </div>
       <h2 aria-label="Lactalis na Operação"><span class="js-chars" aria-hidden="true">Lactalis</span><span class="sub js-chars" aria-hidden="true">na Operação</span></h2>
     </div>
-    <p class="tagline" data-a="up" data-d="1.9s">Lácteos que ajudam a operação a entregar melhor, todos os dias, começando pela rota da <strong style="color:#fff;font-weight:650">Bidfood</strong> em São Paulo.</p>
-    <div class="trio" data-a="up" data-d="2.3s">
-      <div><i class="ic" data-ic="pin"></i>Onde usar</div>
-      <div><i class="ic" data-ic="cart"></i>Como pedir</div>
-      <div><i class="ic" data-ic="check"></i>O que entrega</div>
+    <p class="tagline" data-a="up" data-d="1.9s">A plataforma que coloca a Lactalis na rotina do Food Service: aplicação clara, vendedor preparado e pedido simples. Começando pela rota da <strong style="color:#fff;font-weight:650">Bidfood</strong>, em São Paulo.</p>
+    <div class="trio trio2" data-a="up" data-d="2.3s">
+      <div><i class="ic" data-ic="coffee"></i><span><b>Aplicação clara</b><small>Cada produto ligado a uma ocasião de consumo</small></span></div>
+      <div><i class="ic" data-ic="seller"></i><span><b>Vendedor preparado</b><small>Conversa de 30 segundos na rota Bidfood</small></span></div>
+      <div><i class="ic" data-ic="cart"></i><span><b>Pedido simples</b><small>Do QR ao portal, com recompra sem atrito</small></span></div>
     </div>
   </div>
 </section>
@@ -2074,6 +2074,17 @@ body.mode-scroll .hdr .chap{display:none}
 .wk-panel p{font-size:calc(var(--t-small)*.95)}
 .wk-panel .ent{margin-top:3px}
 
+/* reveal: três atributos da plataforma */
+.reveal .trio2{gap:calc(var(--u)*4);margin-top:calc(var(--u)*3.2)}
+.reveal .trio2>div{align-items:flex-start;text-align:left;gap:calc(var(--u)*1.1);font-family:var(--f-head);letter-spacing:0;text-transform:none}
+.reveal .trio2 .ic{--s:calc(var(--u)*3.2);min-width:30px;min-height:30px;flex:none}
+.reveal .trio2 b{display:block;font-family:var(--f-mono);font-size:var(--t-mono);letter-spacing:.16em;text-transform:uppercase;color:#fff;font-weight:700}
+.reveal .trio2 small{display:block;font-size:var(--t-small);line-height:1.38;color:#C9DDF0;max-width:22ch;margin-top:5px}
+@media (max-width:820px){.reveal .trio2{flex-direction:column;align-items:flex-start;gap:16px;text-align:left}}
+/* cursor nativo (sem cursor desenhado por script) */
+.cur{display:none!important}
+.zoomable,[data-zoom]{cursor:zoom-in!important}
+button,a,[data-goto],.pt,.wk-n,.kit-i{cursor:pointer}
 /* cursor simples */
 .cur-dot{display:none!important}
 .cur-ring{width:20px;height:20px;margin:-10px 0 0 -10px;border:1.5px solid var(--acc);background:transparent;transition:width .18s ease,height .18s ease,margin .18s ease,background .18s ease,opacity .2s}
@@ -2617,7 +2628,7 @@ doc.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('clic
 /* ---------- cursor ---------- */
 var mx=innerWidth/2,my=innerHeight/2;
 addEventListener('pointermove',function(e){mx=e.clientX;my=e.clientY;lastPt={x:mx/innerWidth,y:my/innerHeight};},{passive:true});
-if(fine&&!reduced){
+if(false){ /* cursor personalizado desativado: o cursor nativo responde sem atraso */
   body.classList.add('has-cursor');
   /* cursor simples: um anel pequeno que acompanha o mouse sem atraso e cresce levemente sobre itens clicáveis */
   var ring=$('curRing');
