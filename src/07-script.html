@@ -209,6 +209,22 @@
 .wk{gap:calc(var(--u)*1)}
 .wk-panel{min-height:calc(var(--u)*7);padding:calc(var(--u)*1.2) calc(var(--u)*1.8)}
 @media (max-width:820px){.wk-del{display:none}}
+/* ajustes de encaixe (revisão 4) */
+.lab-bottom{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)}
+#lab .creds{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*1.6)}
+#lab .creds .cap{max-width:14ch}
+.wk{gap:calc(var(--u)*.7)}
+.wk-phases span{padding:4px 6px}
+.wk-line{padding-top:12px}
+.wk-line::before{top:calc(12px + max(30px,var(--u)*3.2)/2)}
+.wk-n .fo{font-size:max(10px,calc(var(--u)*.72))}
+.wk-panel{min-height:0;padding:calc(var(--u)*.9) calc(var(--u)*1.6);gap:calc(var(--u)*1.6)}
+.wk-panel .big{font-size:calc(var(--u)*3.4)}
+.wk-panel h4{margin-bottom:3px}
+.wk-panel p{line-height:1.42}
+.dv{padding:2px 5px;line-height:1.1}
+.wk-del{row-gap:2px;padding-top:calc(var(--u)*.4)}
+@media (max-width:820px){#lab .creds{grid-template-columns:repeat(3,minmax(0,1fr))}}
 
 /* cursor simples */
 .cur-dot{display:none!important}
