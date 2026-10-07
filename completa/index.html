@@ -2045,6 +2045,13 @@ body.mode-scroll .hdr .chap{display:none}
 @media (max-width:820px){#lab .creds{grid-template-columns:minmax(0,1fr);gap:12px}#lab .creds>div{display:flex;align-items:baseline;gap:12px}#lab .creds .cap{max-width:none;margin:0}}
 .dv-h .gk{display:inline-block;width:8px;height:8px;background:var(--coral);transform:rotate(45deg);margin:0 2px}
 .wk-legend{display:none!important}
+.wrap:has(.wk) .tk{font-size:calc(var(--t-h)*.86)}
+.wrap:has(.wk){gap:calc(var(--u)*1.6)}
+.wk-n .no{width:max(28px,calc(var(--u)*2.8));height:max(28px,calc(var(--u)*2.8))}
+.wk-line::before{top:calc(12px + max(28px,var(--u)*2.8)/2)}
+.wk-panel .big{font-size:calc(var(--u)*3)}
+.wk-panel p{font-size:calc(var(--t-small)*.95)}
+.wk-panel .ent{margin-top:3px}
 
 /* cursor simples */
 .cur-dot{display:none!important}
