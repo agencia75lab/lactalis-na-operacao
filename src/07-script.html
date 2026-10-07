@@ -267,6 +267,16 @@
 .wk-p-ent li::before{content:"";width:6px;height:6px;border-radius:50%;background:#1F7FC0;margin-top:.45em;flex:none}
 .wk-p-ent.empty{visibility:hidden}
 .wk-panel .wk-p-de .ent{display:none}
+/* encaixe final em notebooks (1280–1440) */
+#lab .wrap{gap:calc(var(--u)*1.6)}
+#lab .lab-logo{height:calc(var(--u)*8.4)}
+#lab .tk{font-size:calc(var(--t-h)*.9)}
+#lab .m75-steps li{min-height:calc(var(--u)*12);padding:calc(var(--u)*1.4) calc(var(--u)*1.3)}
+#lab .creds .num{font-size:calc(var(--u)*3.8)}
+.wk-panel{padding:calc(var(--u)*.8) calc(var(--u)*1.8);gap:calc(var(--u)*1.8)}
+.wk-p-ent{gap:4px}
+.wk-p-ent ul{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:calc(var(--u)*1.2);row-gap:2px}
+.wk-p-ent li{font-size:max(11.5px,calc(var(--u)*.84))}
 /* kit com 8 itens: lista densa e nota com respiro */
 .wrap:has(.kit2) .tk{font-size:calc(var(--t-h)*.86);max-width:34ch}
 .wrap:has(.kit2){gap:calc(var(--u)*1.5)}
