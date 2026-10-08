@@ -1272,9 +1272,8 @@ body.mode-scroll .hdr .chap{display:none}
         <div class="inv-total" data-a="left">
           <span class="mono" style="color:var(--lime)">Nível 1 · escopo fechado · 90 dias</span>
           <h3>Piloto de Categoria Food Service</h3>
-          <p class="inv-value">R$ 59.900</p><p class="inv-sub">Investimento total · piloto de 90 dias</p>
+          <p class="inv-value">R$ 75.000</p><p class="inv-sub">Investimento total · piloto de 90 dias</p><p class="inv-pay"><span>Pagamento</span><b>3 parcelas de R$ 25.000</b></p>
           <dl>
-            <dt>Pagamento</dt><dd class="tbd">[a preencher]</dd>
             <dt>Validade</dt><dd class="tbd">[a preencher]</dd>
           </dl>
         </div>
@@ -1286,13 +1285,13 @@ body.mode-scroll .hdr .chap{display:none}
       </div>
       <div class="inv-lines">
         <div class="inv-row head" data-a="fade"><span>Frente</span><span>O que está incluso</span><span>Valor</span></div>
-        <div class="inv-row" data-a="up" style="--i:1"><b><i class="ic" data-ic="target"></i>Estratégia e prontidão</b><span>Workshop, diagnóstico comercial, baseline e plano do piloto</span><em>R$ 12.000</em></div>
-        <div class="inv-row" data-a="up" style="--i:2"><b><i class="ic" data-ic="doc"></i>Conteúdo e criação</b><span>Apresentação Bidfood, lâmina A5, folder, guia de rota, fichas técnicas, conteúdo por ocasião e enxoval por canal</span><em>R$ 21.900</em></div>
-        <div class="inv-row" data-a="up" style="--i:3"><b><i class="ic" data-ic="box"></i>Produção leve</b><span>Tiragem inicial de lâminas, folders e cartões de rota</span><em>R$ 7.000</em></div>
-        <div class="inv-row" data-a="up" style="--i:4"><b><i class="ic" data-ic="play"></i>Treinamento</b><span>Kit de treinamento de vendas de 20 min para o time Bidfood</span><em>R$ 5.000</em></div>
-        <div class="inv-row" data-a="up" style="--i:5"><b><i class="ic" data-ic="coffee"></i>Ativações</b><span>Coordenação de demonstração em poucas contas estratégicas</span><em>R$ 6.000</em></div>
-        <div class="inv-row" data-a="up" style="--i:6"><b><i class="ic" data-ic="data"></i>Rastreamento e decisão</b><span>QR rastreável, dashboard e relatório de escala</span><em>R$ 8.000</em></div>
-        <div class="inv-row total" data-a="up" style="--i:7"><b>Investimento total</b><span>Piloto de 90 dias · Nível 1</span><em>R$ 59.900</em></div>
+        <div class="inv-row" data-a="up" style="--i:1"><b><i class="ic" data-ic="target"></i>Estratégia e prontidão</b><span>Workshop, diagnóstico comercial, baseline e plano do piloto</span><em>R$ 15.000</em></div>
+        <div class="inv-row" data-a="up" style="--i:2"><b><i class="ic" data-ic="doc"></i>Conteúdo e criação</b><span>Apresentação Bidfood, lâmina A5, folder, guia de rota, fichas técnicas, conteúdo por ocasião e enxoval por canal</span><em>R$ 27.000</em></div>
+        <div class="inv-row" data-a="up" style="--i:3"><b><i class="ic" data-ic="box"></i>Produção leve</b><span>Tiragem inicial de lâminas, folders e cartões de rota</span><em>R$ 8.000</em></div>
+        <div class="inv-row" data-a="up" style="--i:4"><b><i class="ic" data-ic="play"></i>Treinamento</b><span>Kit de treinamento de vendas de 20 min para o time Bidfood</span><em>R$ 6.000</em></div>
+        <div class="inv-row" data-a="up" style="--i:5"><b><i class="ic" data-ic="coffee"></i>Ativações</b><span>Coordenação de demonstração em poucas contas estratégicas</span><em>R$ 8.000</em></div>
+        <div class="inv-row" data-a="up" style="--i:6"><b><i class="ic" data-ic="data"></i>Rastreamento e decisão</b><span>QR rastreável, dashboard e relatório de escala</span><em>R$ 11.000</em></div>
+        <div class="inv-row total" data-a="up" style="--i:7"><b>Investimento total</b><span>Piloto de 90 dias · Nível 1</span><em>R$ 75.000</em></div>
       </div>
     </div>
     <div class="deal" data-a="up" data-d="1.3s">
@@ -1696,6 +1695,10 @@ body.mode-scroll .hdr .chap{display:none}
 .invest .deal .cta-box .num{font-size:calc(var(--u)*3.6)}
 .invest .deal li{padding-top:calc(var(--u)*.5)}
 @media (max-width:820px){.invest .inv-row.total em{font-size:20px}}
+/* pagamento em destaque no card do total */
+.invest .inv-pay{display:flex;flex-direction:column;gap:3px;margin:calc(var(--u)*.3) 0 0;padding:calc(var(--u)*.7) calc(var(--u)*1);border:1.5px solid var(--lime);border-radius:12px;background:rgba(255,255,255,.06)}
+.invest .inv-pay span{font-family:var(--f-mono);font-size:var(--t-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--lime)}
+.invest .inv-pay b{font-family:var(--f-display);font-weight:800;font-size:max(18px,calc(var(--u)*1.75));line-height:1.05;color:#fff;letter-spacing:.01em}
 /* kit com 8 itens: lista densa e nota com respiro */
 .wrap:has(.kit2) .tk{font-size:calc(var(--t-h)*.86);max-width:34ch}
 .wrap:has(.kit2){gap:calc(var(--u)*1.5)}

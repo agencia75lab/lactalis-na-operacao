@@ -2152,6 +2152,10 @@ body.mode-scroll .hdr .chap{display:none}
 .invest .deal .cta-box .num{font-size:calc(var(--u)*3.6)}
 .invest .deal li{padding-top:calc(var(--u)*.5)}
 @media (max-width:820px){.invest .inv-row.total em{font-size:20px}}
+/* pagamento em destaque no card do total */
+.invest .inv-pay{display:flex;flex-direction:column;gap:3px;margin:calc(var(--u)*.3) 0 0;padding:calc(var(--u)*.7) calc(var(--u)*1);border:1.5px solid var(--lime);border-radius:12px;background:rgba(255,255,255,.06)}
+.invest .inv-pay span{font-family:var(--f-mono);font-size:var(--t-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--lime)}
+.invest .inv-pay b{font-family:var(--f-display);font-weight:800;font-size:max(18px,calc(var(--u)*1.75));line-height:1.05;color:#fff;letter-spacing:.01em}
 /* kit com 8 itens: lista densa e nota com respiro */
 .wrap:has(.kit2) .tk{font-size:calc(var(--t-h)*.86);max-width:34ch}
 .wrap:has(.kit2){gap:calc(var(--u)*1.5)}
